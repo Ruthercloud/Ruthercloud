@@ -1,0 +1,133 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #000428, #004e92), url('../images/background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  overflow-x: hidden;
+}
+
+header {
+  padding: 80px 20px;
+  background: rgba(0, 0, 0, 0.4);
+  animation: slideIn 1.5s ease-in-out;
+}
+
+.logo {
+  width: 250px;
+  display: block;
+  margin: 0 auto 20px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  background: #003366;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  animation: slideIn 1.5s ease-in-out;
+  position: relative;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul li {
+  margin: 10px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 15px 25px;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+  background: white;
+  color: #003366;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  nav ul li {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  nav ul li a {
+    padding: 10px 0;
+  }
+}
+
+.section {
+  padding: 70px 20px;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 20px auto;
+  width: 80%;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 1.5s ease-in-out forwards;
+}
+
+.contact-btn {
+  display: inline-block;
+  margin: 20px;
+  padding: 15px 30px;
+  background: white;
+  color: #004e92;
+  text-decoration: none;
+  font-size: 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.contact-btn:hover {
+  background: #003366;
+  color: white;
+}
+
+footer {
+  background: #002244;
+  padding: 30px;
+  color: white;
+  text-align: center;
+  margin-top: 20px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(-50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
