@@ -1,17 +1,23 @@
+// Wait for the HTML to fully load
 document.addEventListener("DOMContentLoaded", function () {
-    const contactButtons = document.querySelectorAll(".contact-btn");
-  
-    contactButtons.forEach(button => {
-      button.addEventListener("click", function (e) {
-        e.preventDefault();
-        alert("Redirecting to: " + this.href);
-        window.location.href = this.href;
-      });
+  // Contact Button Click Handler
+  const contactButtons = document.querySelectorAll(".contact-btn");
+
+  contactButtons.forEach(button => {
+    button.addEventListener("click", function (e) {
+      e.preventDefault();
+      alert("Redirecting to: " + this.href);
+      window.location.href = this.href;
     });
   });
-  const menuToggle = document.getElementById('menu-toggle');
-const nav = document.getElementById('nav');
 
-menuToggle.addEventListener('click', () => {
-  nav.classList.toggle('active');
+  // Hamburger Menu Toggle
+  const menuToggle = document.getElementById('menu-toggle');
+  const nav = document.getElementById('nav');
+
+  if (menuToggle && nav) {
+    menuToggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+  }
 });
