@@ -42,83 +42,77 @@ body {
   font-size: 16px;
 }
 
-/* Basic Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Header Styling */
-header {
+header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  background-color: #1e1e2f;
-  color: #fff;
-  position: relative;
+  padding: 10px 30px;
 }
 
-/* Logo */
+.navbar-logo img {
+  height: 70px;
+  max-height: 10vh; /* mobile screen ke liye smart resize */
+  width: auto;
+}
+
+
 .logo {
-  font-size: 1.5rem;
+  font-size: 60px; /* Adjust the size */
+  color: #004e92; /* Original logo color */
   font-weight: bold;
 }
 
-/* Navigation */
-.nav {
+nav ul {
+  list-style: none;
+  padding: 0;
+  background: #003366;
+  margin: 0;
   display: flex;
-  gap: 1.5rem;
+  justify-content: center;
+  animation: slideIn 1.5s ease-in-out;
+  position: relative;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
 }
 
-/* Navigation Links */
-.nav a {
-  color: #fff;
+nav ul li {
+  margin: 10px;
+}
+
+nav ul li a {
+  color: white;
   text-decoration: none;
-  transition: color 0.3s;
+  font-size: 18px;
+  padding: 15px 25px;
+  display: inline-block;
+  transition: 0.3s;
 }
 
-.nav a:hover {
-  color: #00d1ff;
+nav ul li a.active,
+nav ul li a:hover {
+  background: white;
+  color: #003366;
+  border-radius: 5px;
 }
 
-/* Hamburger Menu */
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 5px;
-}
-
-.menu-toggle span {
-  width: 25px;
-  height: 3px;
-  background-color: #fff;
-  transition: all 0.3s ease;
-}
-
-/* Responsive Styling */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: flex;
+@media screen and (max-width: 600px) {
+  nav ul {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
   }
 
-  .nav {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background-color: #1e1e2f;
-    flex-direction: column;
-    align-items: center;
-    display: none;
+  nav ul li {
+      width: 100%;
+      margin: 5px 0;
   }
 
-  .nav.active {
-    display: flex;
+  nav ul li a {
+      padding: 10px 0;
   }
 }
+
 
 
 .section {
