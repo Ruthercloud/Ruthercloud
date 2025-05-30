@@ -1,4 +1,3 @@
-// Highlight active navigation link based on current page URL
 window.addEventListener('DOMContentLoaded', () => {
     const path = window.location.pathname.split('/').pop() || 'index.html';
     document.querySelectorAll('.navbar ul li a').forEach(link => {
