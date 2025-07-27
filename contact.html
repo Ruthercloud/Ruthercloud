@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - Taruntelitech</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+  <nav class="navbar" role="navigation">
+    <div class="logo">
+      <img src="tarun.png" alt="TarunTeliTech Logo" style="height: clamp(30px, 5vw, 40px); vertical-align: middle;">
+      <span style="margin-left: clamp(5px, 1vw, 10px);">Taruntelitech</span>
+    </div>
+    <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" onclick="toggleMenu()">&#9776;</button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="clients.html">Client Testimonial</a></li>
+      <li><a href="technologies.html">Technologies</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <section class="contact-section">
+  <div class="contact-content">
+    <h1>Get in Touch with Us</h1>
+    <h3>Have a project in mind? Fill out the form below, and let’s start the conversation!</h3>
+  </div>
+</section>
+  <form
+  action="https://formspree.io/f/mnnddnov"
+  method="POST"
+  class="contact-form"
+>
+  <label for="name">Your name</label>
+  <input type="name" id="name" name="name" required>
+
+  <label for="email">Your email</label>
+  <input type="email" id="email" name="email" required>
+
+  <label for="name">Phone</label>
+  <input type="Phone" id="Phone" name="Phone" required>
+
+  <label for="name">Company name</label>
+  <input type="Company name" id="Company name" name="Company name" required>
+
+  <label for="Your Requirement">Your Requirement</label>
+  <textarea id="Your Requirement" name="Your Requirement" rows="5" required></textarea>
+
+  <!-- अगर और fields चाहिये तो यहाँ add करें -->
+  <button type="submit" class="btn">Send</button>
+</form>
+
+ <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-section">
+      <h2>Taruntelitech</h2>
+      <p>Sindhu Mavli,<br> Udaipur, Rajasthan, India, 313204<br>
+        +91‑6367757256<br>
+      <a href="mailto:taruntelitech@gmail.com">Info@taruntelitech.com</a>
+      </p>
+    </div>
+    
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-section">
+  <h3>Follow Us</h3>
+  <div class="social-icons">
+    <a href="https://www.instagram.com/taruntelitech?igsh=MWU0eGsxNzkxODIzbQ==" target="_blank">
+      <img src="instagram.png" alt="Instagram" width="30" height="30">
+    </a>
+    <a href="https://x.com/taruntelitech?t=nJE6kzNdcWT9V7cit8nHpw&s=09" target="_blank">
+      <img src="twitter-logo.png" alt="Twitter" width="30" height="30">
+    </a>
+</div>
+
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; Copyright 2023-2025 Taruntelitech Pvt. Ltd. All Rights Reserved.</p>
+  </div>
+</footer>
+
+  
+  <script src="script.js"></script>
+</body>
+</html>
