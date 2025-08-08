@@ -698,4 +698,53 @@ a {
 a:hover {
     text-decoration: underline;
     transform: translateY(-2px);
+
+}
+
+
+
+.trusted-by {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #26282A; /* Perfect match with dark site theme */
+}
+
+.trusted-by h2 {
+  font-size: 2em;
+  margin-bottom: 40px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.brands-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+}
+
+.brand-item {
+  text-align: center;
+  width: 120px;
+  transition: transform 0.3s ease;
+}
+
+.brand-item img {
+  width: 100%;
+  max-height: 60px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.brand-item p {
+  margin-top: 10px;
+  font-weight: 500;
+  font-size: 14px;
+  color: #bfbfbf; /* Soft gray for brand text */
+}
+
+.brand-item:hover img {
+  filter: grayscale(0%);
+  transform: scale(1.1);
 }
