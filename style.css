@@ -705,15 +705,17 @@ a:hover {
 
 .trusted-by {
   padding: 60px 20px;
+  margin-top: 60px; /* 👈 This line adds space below the section */
+  background: #222;
+  border-radius: 15px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
   text-align: center;
-  background-color: #26282A; /* Perfect match with dark site theme */
 }
 
 .trusted-by h2 {
-  font-size: 2em;
-  margin-bottom: 40px;
-  font-weight: 600;
-  color: #ffffff;
+ font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #e0e0e0;
 }
 
 .brands-container {
@@ -748,3 +750,4 @@ a:hover {
   filter: grayscale(0%);
   transform: scale(1.1);
 }
+
