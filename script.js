@@ -25,3 +25,33 @@ window.addEventListener('DOMContentLoaded', () => {
     nav.classList.toggle("active");
   }
   
+
+// Count-up animation for stats
+const counters = document.querySelectorAll(".counter");
+const speed = 200; // smaller = faster
+
+counters.forEach(counter => {
+  const animate = () => {
+    const value = +counter.getAttribute("data-target");
+    const data = +counter.innerText;
+    const increment = value / speed;
+
+    if (data < value) {
+      counter.innerText = Math.ceil(data + increment);
+      setTimeout(animate, 10);
+    } else {
+      // Custom suffix rule
+      if (value === 50 || value === 20) {
+        counter.innerText = value + "+";
+      } else if (value === 96 || value === 85) {
+        counter.innerText = value + "%";
+      } else {
+        counter.innerText = value;
+      }
+    }
+  };
+  animate();
+});
+
+
+  
