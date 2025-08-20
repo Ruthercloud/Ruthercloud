@@ -53,6 +53,11 @@ header {
     color: transparent;
 }
 
+.navbar, .nav-menu {
+  position: relative;
+  z-index: 100; /* nav aur menu sabse upar */
+}
+
 .nav-links {
     display: flex;
     gap: 25px;
@@ -1032,6 +1037,7 @@ a:hover {
 .stat-item p {
   font-size: 1rem;
 }
+
 
 
 
