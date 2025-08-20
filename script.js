@@ -26,11 +26,13 @@ window.addEventListener('DOMContentLoaded', () => {
   }
   
 
-// Count-up animation for stats
-const counters = document.querySelectorAll(".counter");
-const speed = 200; // smaller = faster
 
-counters.forEach(counter => {
+
+  // Count-up animation for stats
+const counters = document.querySelectorAll(".counter");
+const speed = 400; // smaller = faster
+
+function runCounter(counter) {
   const animate = () => {
     const value = +counter.getAttribute("data-target");
     const data = +counter.innerText;
@@ -50,8 +52,61 @@ counters.forEach(counter => {
       }
     }
   };
+
+  // reset before running again
+  counter.innerText = "0";
   animate();
+}
+
+// 👉 Run animation whenever counters come into view
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      runCounter(entry.target);
+    }
+  });
+}, { threshold: 0.5 }); // 50% visible hone par trigger hoga
+
+counters.forEach(counter => {
+  observer.observe(counter);
+});
+
+
+
+  
+
+// Animated words for Hero Section
+const words = ["Future-Ready", "Customized", "Innovative", "Responsive"];
+let index = 0;
+
+function changeWord() {
+  const wordElement = document.getElementById("animated-word");
+  const underline = document.querySelector(".underline");
+
+  // Fade out + shrink underline
+  wordElement.style.opacity = 0;
+  underline.style.width = "0";
+
+  setTimeout(() => {
+    wordElement.textContent = words[index];
+    wordElement.style.opacity = 1;
+
+    // 👉 Calculate underline width based on word width
+    const wordWidth = wordElement.offsetWidth;
+    underline.style.width = wordWidth + "px";
+
+    index = (index + 1) % words.length;
+  }, 600); // fade-out duration
+}
+
+// Run every 3.5 seconds (like Kansoft)
+setInterval(changeWord, 3500);
+
+// ✅ First run only once
+window.addEventListener("load", () => {
+  changeWord();
 });
 
 
   
+
