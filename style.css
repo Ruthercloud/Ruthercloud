@@ -116,10 +116,12 @@ header nav ul li a:hover {
     color: #1E90FF;
 }
 
+
+
 .hero {
   position: relative;
   text-align: center;
-  padding: 120px 20px;
+  padding: 100px 15px; /* 🔹 Mobile-friendly padding */
   border-radius: 15px;
   overflow: hidden;
   min-height: 100vh;
@@ -136,7 +138,7 @@ header nav ul li a:hover {
   top: 0; left: 0; right: 0; bottom: 0;
   background: 
     linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)),
-    url("UDAIPUR.jpeg"); /* 👈 apni image ka path */
+    url("UDAIPUR.jpeg");
   background-size: cover;
   background-position: center;
   z-index: -2;
@@ -181,6 +183,38 @@ header nav ul li a:hover {
   50% { opacity: 0.3; }
   100% { transform: translateY(-100%); opacity: 0; }
 }
+
+/* 🔹 Mobile Responsive */
+@media (max-width: 640px) {
+  .hero {
+    padding: 80px 10px;
+    min-height: 90vh;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem; /* Heading smaller */
+    line-height: 1.3;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    margin: 8px 0 18px;
+  }
+
+  .floating-shapes li:nth-child(1) {
+    width: 50px; height: 50px;
+    left: 15%;
+  }
+  .floating-shapes li:nth-child(2) {
+    width: 30px; height: 30px;
+    left: 45%;
+  }
+  .floating-shapes li:nth-child(3) {
+    width: 60px; height: 60px;
+    left: 65%;
+  }
+}
+
 
 
 
@@ -1113,6 +1147,7 @@ a:hover {
 .stat-item p {
   font-size: 1rem;
 }
+
 
 
 
