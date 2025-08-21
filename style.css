@@ -191,14 +191,16 @@ header nav ul li a:hover {
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    line-height: 1.3;
+    line-height: 1.2;   /* 🔹 Thoda tight */
+    margin-bottom: 12px; /* 🔹 Neeche ka gap thoda kam */
 }
 
 .hero p {
-    font-size: 1.2rem;
-    margin: 15px 0 25px;
+    font-size: 1.15rem;
+    margin: 10px 0 20px; /* 🔹 Thoda compact margin */
     color: #ccc;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.4px;
+    line-height: 1.5; /* 🔹 Readability ke liye */
 }
 
 
@@ -229,22 +231,40 @@ header nav ul li a:hover {
 }
 }
 
+
+
+
+
+
 .btn {
-    background: linear-gradient(135deg, #1E90FF, #187BCD); /* Gradient button */
+    background: linear-gradient(135deg, #1E90FF, #187BCD);
     padding: 12px 25px;
     color: #fff;
     font-weight: 600;
     border-radius: 10px;
     cursor: pointer;
     border: none;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3), -4px -4px 10px rgba(30, 144, 255, 0.2); /* Neumorphism */
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3),
+                -4px -4px 10px rgba(30, 144, 255, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Hover effect */
 .btn:hover {
     transform: translateY(-3px);
-    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.4), -6px -6px 15px rgba(30, 144, 255, 0.3);
+    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.4),
+                -6px -6px 15px rgba(30, 144, 255, 0.3);
 }
+
+/* 👇 Yeh add karo */
+.btn,
+.btn:hover,
+.btn:active,
+.btn:focus {
+    color: #fff !important;  /* Always white text */
+}
+
+
 
 
 
@@ -1093,6 +1113,7 @@ a:hover {
 .stat-item p {
   font-size: 1rem;
 }
+
 
 
 
