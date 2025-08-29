@@ -75,42 +75,57 @@ header {
     transform: translateZ(5px);
     font-weight: 600;
 }
+
+/* Button base */
 .hamburger {
-    display: none;
-    font-size: 28px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
+  display: none;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  position: relative;
+  color: #e0e0e0;
 }
 
-.hamburger:hover {
-    transform: rotate(90deg) scale(1.1);
+/* Icon text via pseudo-element: default ☰ */
+.hamburger::before {
+  content: "☰";
+  font-size: 28px;
+  line-height: 44px;
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  transition: transform 0.3s ease;
 }
 
-/* Media Query for mobile */
+/* Jab open ho to ✕ dikhaye */
+.hamburger[aria-expanded="true"]::before {
+  content: "✕";
+  transform: rotate(90deg);
+}
+
+/* Mobile pe button dikhana */
 @media (max-width: 768px) {
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background: linear-gradient(135deg, #2a2a2a, #1c1c1c);
-        position: absolute;
-        top: 70px;
-        left: 0;
-        z-index: 999;
-        backdrop-filter: blur(10px);
-        background-color: rgba(42, 42, 42, 0.9);
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-        border-radius: 0 0 15px 15px;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .hamburger {
-        display: block;
-    }
+  .hamburger { display: block; }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: linear-gradient(135deg, #2a2a2a, #1c1c1c);
+    position: absolute;
+    top: 70px;
+    left: 0;
+    z-index: 999;
+    backdrop-filter: blur(10px);
+    background-color: rgba(42, 42, 42, 0.9);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    border-radius: 0 0 15px 15px;
+  }
+  .nav-links.active { display: flex; }
 }
+
 
 header nav ul li a:hover {
     color: #1E90FF;
@@ -1117,6 +1132,28 @@ a:hover {
 }
 
 
+
+
+/* Highlights container horizontal */
+.highlights-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;   /* space between items */
+  flex-wrap: wrap; /* responsive ke liye */
+}
+
+.highlight-item h3 {
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+.highlight-item p {
+  font-size: 1rem;
+}
+
+
+
 .stats {
   display: flex;
   justify-content: center;
@@ -1134,6 +1171,116 @@ a:hover {
 .stat-item p {
   font-size: 1rem;
 }
+
+
+
+/* Highlights container - hamesha horizontal */
+.highlights-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;       /* space between items */
+  flex-wrap: wrap; /* agar screen chhoti ho to next line me chale jayega */
+}
+
+.highlight-item h3 {
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+.highlight-item p {
+  font-size: 1rem;
+}
+
+/* Mobile view ke liye thoda size adjust karo */
+@media (max-width: 768px) {
+  .highlight-item h3 {
+    font-size: 1.5rem; /* chhota number */
+  }
+
+  .highlight-item p {
+    font-size: 0.9rem; /* chhota text */
+  }
+
+  .highlights-container {
+    gap: 20px; /* mobile par kam gap */
+  }
+}
+
+
+.contact-info-boxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin: 30px 0;
+}
+
+
+.info-box {
+  background: linear-gradient(135deg, #2a2a2a, #1c1c1c);
+  color: #e0e0e0;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+}
+
+.icon-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.info-icon {
+  width: 80px; /* adjust as needed */
+  height: auto;
+  object-fit: contain;
+}
+
+
+
+
+
+.worldwide-section {
+  margin: 50px 0;
+  text-align: center;
+}
+
+.worldwide-section .info-box {
+  background: linear-gradient(135deg, #2a2a2a, #1c1c1c);
+  color: #e0e0e0;
+  padding: 40px;
+  border-radius: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.worldwide-section .info-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+}
+
+.worldwide-section .icon-wrapper {
+  margin-bottom: 20px;
+}
+
+.worldwide-section .info-icon-large {
+  width: 150px;   /* bada image */
+  height: auto;
+  object-fit: contain;
+}
+
+
+
 
 
 
