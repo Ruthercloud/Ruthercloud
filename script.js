@@ -20,9 +20,23 @@ window.addEventListener('DOMContentLoaded', () => {
   });
   
   // Mobile menu toggle
-  function toggleMenu() {
-    const nav = document.getElementById("nav-links");
-    nav.classList.toggle("active");
+ function toggleMenu() {
+    const nav = document.getElementById('nav-links');
+    const btn = document.querySelector('.hamburger');
+
+    const isOpen = nav.classList.toggle('active');   // show/hide menu
+    btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false'); // icon switch via CSS
+
+    // (optional) link pe click hote hi band ho jaye
+    if (isOpen) {
+      nav.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', closeOnce, { once: true });
+      });
+    }
+    function closeOnce() {
+      nav.classList.remove('active');
+      btn.setAttribute('aria-expanded', 'false');
+    }
   }
   
 
@@ -43,7 +57,7 @@ function runCounter(counter) {
       setTimeout(animate, 10);
     } else {
       // Custom suffix rule
-      if (value === 50 || value === 20) {
+      if (value === 50 || value === 30) {
         counter.innerText = value + "+";
       } else if (value === 96 || value === 85) {
         counter.innerText = value + "%";
@@ -109,4 +123,5 @@ window.addEventListener("load", () => {
 
 
   
+
 
