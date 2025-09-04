@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio - RUTHERCLOUD</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+ <header>
+  <nav class="navbar" role="navigation">
+      <div class="logo">
+  <a href="index.html">
+    <img src="ruther.jpg" alt="RutherCloud Logo" 
+         style="height: clamp(25px, 1vw, 30px);">
+  </a>
+</div>
+   <button class="hamburger"
+            type="button"
+            aria-label="Toggle navigation menu"
+            aria-controls="nav-links"
+            aria-expanded="false"
+            onclick="toggleMenu()"></button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="portfolio.html" class="active">Portfolio</a></li>
+      <li><a href="technologies.html">Technologies</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+</header>
+
+  
+<main class="portfolio-section">
+  <h1>Our Portfolio</h1>
+
+  <div class="projects-grid">
+    <!-- Project 1 -->
+    <div class="project">
+      <h2>Pritam Grocery Store</h2>
+      <a href="pritam-grocery.html" target="_blank">
+        <img src="grocery-thumbnail.png" alt="Pritam Grocery Store Screenshot" />
+      </a>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project">
+      <h2>Sonu Construction Website</h2>
+      <a href="sonu-construction.html" target="_blank">
+        <img src="construction-thumbnail.png" alt="Sonu Construction Website Screenshot" />
+      </a>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project">
+      <h2>InkoraTee Brand Website</h2>
+      <a href="inkoratee.html" target="_blank">
+        <img src="inkoratee-thumbnail.png" alt="InkoraTee Website Screenshot" />
+      </a>
+    </div>
+
+    <!-- Project 4 -->
+    <div class="project">
+      <h2>Branded Shoes Shop Website</h2>
+      <a href="branded-shoes.html" target="_blank">
+        <img src="branded-shoe-thumbnail.png" alt="Branded Shoe Store Screenshot" />
+      </a>
+    </div>
+  </div>
+</main>
+
+  
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-section">
+      <div class="logo">
+        <a href="index.html"><img src="ruhterlogo.png" alt="RutherCloud Logo"></a>
+      </div>
+      <p>
+        Sindhu Mavli,<br>
+        Udaipur, Rajasthan, India, 313204<br>
+        +91-6367757256<br>
+        <a href="mailto:Info@ruthercloud.com">Info@ruthercloud.com</a>
+      </p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/ruthercloud?igsh=MWU0eGsxNzkxODIzbQ=="><img src="instagram.png" alt="Instagram"></a>
+        <a href="https://x.com/RutherCloud?t=x-VeHMPO5INHrKK3ME0FWQ&s=08"><img src="twitter-logo.png" alt="Twitter"></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="copyright-box">
+      <p>© 2023-2025 Ruthercloud Solutions Pvt. Ltd. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+  
+
+  <script src="script.js"></script>
+</body>
+</html>

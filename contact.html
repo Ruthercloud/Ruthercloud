@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - RUTHERCLOUD</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+ <header>
+  <nav class="navbar" role="navigation">
+      <div class="logo">
+  <a href="index.html">
+    <img src="ruther.jpg" alt="RutherCloud Logo" 
+         style="height: clamp(25px, 1vw, 30px);">
+  </a>
+</div>
+     <button class="hamburger"
+            type="button"
+            aria-label="Toggle navigation menu"
+            aria-controls="nav-links"
+            aria-expanded="false"
+            onclick="toggleMenu()"></button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="technologies.html">Technologies</a></li>
+      <li><a href="contact.html" class="active">Contact Us</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="contact-section">
+  <div class="contact-content">
+    <h1>Get in Touch with Us</h1>
+    <h3>Have a project in mind? Fill out the form below, and let’s start the conversation!</h3>
+  </div>
+
+  <form
+  action="https://formspree.io/f/mnnddnov"
+  method="POST"
+  class="contact-form"
+>
+  <label for="name">Your name</label>
+  <input type="name" id="name" name="name" required>
+
+  <label for="email">Your email</label>
+  <input type="email" id="email" name="email" required>
+
+  <label for="name">Phone</label>
+  <input type="Phone" id="Phone" name="Phone" required>
+
+  <label for="name">Company name</label>
+  <input type="Company name" id="Company name" name="Company name" required>
+
+  <label for="Your Requirement">Your Requirement</label>
+  <textarea id="Your Requirement" name="Your Requirement" rows="5" required></textarea>
+
+
+  <button type="submit" class="btn">Send</button>
+</form>
+
+  <div class="contact-info-boxes">
+    <div class="info-box">
+      <img src="pin.png" alt="Corporate Office" class="info-icon">
+      <h2>Corporate Office</h2>
+      <p>Sindhu Mavli,<br>Udaipur, Rajasthan, India, 313204</p>
+    </div>
+
+    <div class="info-box">
+      <img src="mail.png" alt="Connect with us" class="info-icon">
+      <h2>Connect with us</h2>
+      <p>Email: <a href="mailto:ruthercloud@gmail.com">Info@ruthercloud.com</a><br>
+         Phone: +91-6367757256</p>
+    </div>
+  <!-- New Info Boxes End -->
+</section>
+
+
+<section class="worldwide-section">
+  <div class="worldwide-section h2">
+    <h2>We have worked with client’s worldwide</h2>
+    <p>Delivering digital solutions to businesses across India and beyond.</p>
+  </div>
+  <img src="worlide.png" alt="Worldwide Clients" class="info-icon-large">
+</section>
+
+
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-section">
+      <div class="logo">
+        <a href="index.html"><img src="ruhterlogo.png" alt="RutherCloud Logo"></a>
+      </div>
+      <p>
+        Sindhu Mavli,<br>
+        Udaipur, Rajasthan, India, 313204<br>
+        +91-6367757256<br>
+        <a href="mailto:Info@ruthercloud.com">Info@ruthercloud.com</a>
+      </p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/ruthercloud?igsh=MWU0eGsxNzkxODIzbQ=="><img src="instagram.png" alt="Instagram"></a>
+        <a href="https://x.com/RutherCloud?t=x-VeHMPO5INHrKK3ME0FWQ&s=08"><img src="twitter-logo.png" alt="Twitter"></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="copyright-box">
+      <p>© 2023-2025 Ruthercloud Solutions Pvt. Ltd. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+  
+  <script src="script.js"></script>
+</body>
+</html>
