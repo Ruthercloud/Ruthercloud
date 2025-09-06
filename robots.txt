@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://ruthercloud.netlify.app/sitemap.xml
