@@ -33,7 +33,7 @@
 
   <url>
     <loc>https://ruthercloud.netlify.app/contact.html</loc>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
 
   <url>
@@ -107,3 +107,4 @@
   </url>
 
 </urlset>
+
