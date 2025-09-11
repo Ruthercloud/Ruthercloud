@@ -72,7 +72,7 @@ function runCounter(counter) {
   animate();
 }
 
-// 👉 Run animation whenever counters come into view
+// Run animation whenever counters come into view
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
