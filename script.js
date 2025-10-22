@@ -42,7 +42,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
 
-  // Count-up animation for stats
+// Count-up animation for stats
 const counters = document.querySelectorAll(".counter");
 const speed = 400; // smaller = faster
 
@@ -57,7 +57,7 @@ function runCounter(counter) {
       setTimeout(animate, 10);
     } else {
       // Custom suffix rule
-      if (value === 50 || value === 30) {
+      if (value === 150 || value === 100 || value === 200 || value === 2) {
         counter.innerText = value + "+";
       } else if (value === 96 || value === 85) {
         counter.innerText = value + "%";
@@ -71,6 +71,11 @@ function runCounter(counter) {
   counter.innerText = "0";
   animate();
 }
+
+// Run all counters
+counters.forEach(runCounter);
+
+
 
 // Run animation whenever counters come into view
 const observer = new IntersectionObserver((entries) => {
@@ -215,3 +220,4 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
