@@ -90,14 +90,14 @@ a:hover {
   display: grid;
   place-items: center;
   transition: transform 0.3s ease;
-  color: #1E90FF; /* Teal accent */
+  color: #222; /* Teal accent */
 }
 
 /* Jab open ho to ✕ dikhaye */
 .hamburger[aria-expanded="true"]::before {
   content: "✕";
   transform: rotate(90deg);
-  color: #ff4d4d; /* Red for close */
+  color: #222; /* Red for close */
 }
 
 /* Mobile pe button dikhana */
