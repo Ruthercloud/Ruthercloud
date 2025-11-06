@@ -801,14 +801,6 @@ header nav ul li a:hover {
     transform: translateZ(3px);
 }
 
-.social-icons a img {
-    filter: brightness(0) invert(0.2);
-}
-
-.social-icons a:hover img {
-    filter: brightness(0) invert(0.4);
-    transform: scale(1.2) translateZ(2px);
-}
 
 .footer-bottom {
     background: #E6E6E6;
@@ -996,13 +988,6 @@ header nav ul li a:hover {
 .social-icons img {
   width: 30px;
   height: 30px;
-  filter: brightness(0) invert(1); /* white icons */
-  transition: transform 0.3s, filter 0.3s;
-}
-
-.social-icons img:hover {
-  transform: scale(1.1);
-  filter: brightness(0) invert(0) sepia(1) hue-rotate(190deg) saturate(3);
 }
 
 .footer-bottom {
@@ -1959,6 +1944,7 @@ ol li {
     font-size: 1.05rem;
   }
 }
+
 
 
 
