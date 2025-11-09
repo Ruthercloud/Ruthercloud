@@ -268,45 +268,6 @@ header nav ul li a:hover {
 }
 
 
-
-
-
-
-
-/* Container for service boxes */
-.services-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-
-
-.service-item img {
-  width: 70px;
-  height: 70px;
-  object-fit: contain;
-  margin-bottom: 20px;
-}
-
-.service-item h3 {
-  font-size: 1.4rem;
-  margin-bottom: 12px;
-  color: #111;
-}
-
-
-
-/* Hover Effect */
-.service-item:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.7);
-  background: #fff;
-}
-
-
 .underline {
     position: absolute;
     bottom: -4px;
@@ -1918,6 +1879,7 @@ ol li {
     font-size: 1.05rem;
   }
 }
+
 
 
 
