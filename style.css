@@ -55,7 +55,7 @@ a:hover {
   gap: 20px;
   list-style: none;
   justify-content: flex-end; /* right corner ke paas */
-  padding: 0 20px; /* dono side se thoda space (adjust kar sakte ho) */
+  padding: 0 15px; /* dono side se thoda space (adjust kar sakte ho) */
   margin: 0;
 }
 
@@ -1949,6 +1949,7 @@ ol li {
     font-size: 1.05rem;
   }
 }
+
 
 
 
