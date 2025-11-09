@@ -771,13 +771,7 @@ header nav ul li a:hover {
     margin-right: 8px;
 }
 
-.founder {
-    background: #E6E6E6;
-    padding: 20px;
-    border-radius: 15px;
-    width: 250px;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1), -4px -4px 10px rgba(30, 144, 255, 0.2);
-}
+
 
 
 .key-highlights, .stats {
@@ -1886,6 +1880,7 @@ ol li {
     font-size: 1.05rem;
   }
 }
+
 
 
 
