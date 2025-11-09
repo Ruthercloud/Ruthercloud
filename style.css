@@ -133,43 +133,32 @@ header nav ul li a:hover {
 /* Hero Section */
 .hero {
   position: relative;
-  min-height: 100vh;
+  min-height: 70vh; 
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
+  text-align: left;
   padding: 60px 20px;
-  overflow: hidden;
-}
-
-
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
   background: 
-    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)),
-    url("UDAIPUR.jpeg");
-  background-size: cover;
-  background-position: center;
-  z-index: -2;
+    linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.8)),
+    url("Udaipur.jpg") center/cover no-repeat;
+  overflow: hidden;
+  color: #fff;
 }
 
-
-/* Floating shapes background */
+/* Floating shapes */
 .floating-shapes {
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
   list-style: none;
   margin: 0; padding: 0;
-  z-index: -1;
+  z-index: 0;
 }
 .floating-shapes li {
   position: absolute;
-  display: block;
-  width: 30px; height: 30px;
-  background: rgba(0, 196, 204, 0.3);
+  width: 25px; height: 25px;
+  background: rgba(30, 144, 255, 0.3);
   border-radius: 50%;
   animation: float 10s infinite ease-in-out;
 }
@@ -179,90 +168,93 @@ header nav ul li a:hover {
   100% { transform: translateY(0) rotate(360deg); }
 }
 
-/* Hero Content */
-.hero-content h1 {
-  font-size: 2.5rem;
-  line-height: 1.3;
-  font-weight: 700;
-  color: #111;
-  margin-bottom: 40px;
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
 }
-
-.hero-content span#animated-word {
-  color: #1E90FF;
-  font-weight: 700;
-}
-
-/* Featured Services */
-.featured-services {
-  margin-top: 20px;
-}
-
-
-
 
 .hero h1 {
-    font-size: 2.8rem;
-    font-weight: 700;
-    background: linear-gradient(45deg, #1E90FF, #1E90FF);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    line-height: 1.2;
-    margin-bottom: 12px;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #ffffff;
+  margin-bottom: 35px;
 }
 
-.hero p {
-    font-size: 1.15rem;
-    margin: 10px 0 20px;
-    color: #333333;
-    letter-spacing: 0.4px;
-    line-height: 1.5;
+/* Service Highlights (like Kansoft) */
+.service-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.hero-cta {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    flex-wrap: wrap;
+.service-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
 }
 
-.hero-cta .btn {
-    padding: 10px 20px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: 600;
+.icon-circle {
+  width: 38px;
+  height: 38px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.icon-circle img {
+  width: 18px;
+  height: 18px;
+}
+
+.service-item h2 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+.service-item p {
+  margin: 5px 0 0;
+  font-size: 0.95rem;
+  color: #dddddd;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .hero {
+    min-height: 85vh;
+    text-align: left;
+    padding: 100px 60px;
+  }
+  .service-highlights {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .service-item {
+    flex: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    min-height: 70vh;
+    padding: 60px 20px;
+  }
+  .hero h1 {
+    font-size: 1.6rem;
+    line-height: 1.4;
     text-align: center;
+  }
+  .service-highlights {
+    text-align: left;
+    gap: 18px;
+  }
 }
-
-@media (max-width: 640px) {
-    .hero-cta {
-        flex-direction: column;
-        align-items: stretch;
-    }
-    .hero-cta .btn:not(:last-child) {
-        margin-bottom: 10px;
-    }
-}
-
-.btn {
-    background: linear-gradient(135deg, #1E90FF, #187BCD);
-    padding: 12px 25px;
-    color: #FFFFFF;
-    font-weight: 600;
-    border-radius: 10px;
-    cursor: pointer;
-    border: none;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2), -4px -4px 10px rgba(30, 144, 255, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.btn:hover, .btn:active, .btn:focus {
-    transform: translateY(-3px);
-    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.3), -6px -6px 15px rgba(30, 144, 255, 0.4);
-    color: #FFFFFF !important;
-}
-
 #animated-word {
     color: #1E90FF;
     font-weight: 600;
@@ -1949,6 +1941,7 @@ ol li {
     font-size: 1.05rem;
   }
 }
+
 
 
 
