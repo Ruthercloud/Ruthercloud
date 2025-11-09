@@ -95,7 +95,7 @@ counters.forEach(counter => {
   
 
 // Animated words for Hero Section
-const words = ["Future-Ready", "Customized", "Innovative", "Responsive"];
+const words = ["Affordable", "Customized", "Innovative", "Responsive"];
 let index = 0;
 
 function changeWord() {
@@ -220,4 +220,5 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
 
