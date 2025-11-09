@@ -129,7 +129,6 @@ header nav ul li a:hover {
 }
 
 
-
 /* Hero Section */
 .hero {
   position: relative;
@@ -255,6 +254,8 @@ header nav ul li a:hover {
     gap: 18px;
   }
 }
+
+
 #animated-word {
     color: #1E90FF;
     font-weight: 600;
@@ -265,6 +266,8 @@ header nav ul li a:hover {
     position: relative;
     display: inline-block;
 }
+
+
 
 
 
@@ -1941,6 +1944,7 @@ ol li {
     font-size: 1.05rem;
   }
 }
+
 
 
 
