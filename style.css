@@ -197,12 +197,14 @@ header nav ul li a:hover {
 .icon-circle {
   width: 38px;
   height: 38px;
-  background: white;
+  background: white; /* halka transparent white */
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  backdrop-filter: blur(6px); /* glass effect */
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .icon-circle img {
@@ -1945,6 +1947,7 @@ ol li {
     font-size: 1.05rem;
   }
 }
+
 
 
 
