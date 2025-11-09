@@ -272,22 +272,6 @@ header nav ul li a:hover {
 
 
 
-/* =========================
-   Featured Services Section
-========================= */
-.featured-services {
-  background: #fff; /* dark background */
-  color: #111;
-  text-align: center;
-  padding: 70px 20px;
-}
-
-.featured-services h2 {
-  font-size: 2.5rem;
-  margin-bottom: 50px;
-  color: #1a1a1a; /* blue accent */
-  text-shadow: 1px 1px 6px rgba(0,0,0,0.5);
-}
 
 /* Container for service boxes */
 .services-container {
@@ -298,14 +282,7 @@ header nav ul li a:hover {
   margin: 0 auto;
 }
 
-/* Service Card */
-.service-item {
-  background: #fff;
-  padding: 30px 20px;
-  border-radius: 15px;
-  box-shadow: 0 6px 14px rgba(0,0,0,0.5);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+
 
 .service-item img {
   width: 70px;
@@ -320,11 +297,7 @@ header nav ul li a:hover {
   color: #111;
 }
 
-.service-item p {
-  font-size: 1rem;
-  color: #111;
-  line-height: 1.6;
-}
+
 
 /* Hover Effect */
 .service-item:hover {
@@ -1945,6 +1918,7 @@ ol li {
     font-size: 1.05rem;
   }
 }
+
 
 
 
