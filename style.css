@@ -927,14 +927,16 @@ header nav ul li a:hover {
 }
 
 .footer-bottom {
-    text-align: center;
-    padding: 15px 0;
-    background: #1c1c1c;
-    border-top: 1px solid #444;
-    border-radius: 0 0 15px 15px;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+  width: 100%; /* poori screen cover kare */
+  text-align: center;
+  background: #111; /* dark flat look */
+  border-top: 1px solid rgba(255, 255, 255, 0.2); /* thodi clear subtle line */
+  color: #ccc;
+  font-size: 1rem; /* increased font size */
+  letter-spacing: 0.4px;
+  padding: 12px 0; /* spacing for clean layout */
+  margin: 0; /* ensure no gap around */
 }
-
 
 
 
@@ -1880,6 +1882,7 @@ ol li {
     font-size: 1.05rem;
   }
 }
+
 
 
 
