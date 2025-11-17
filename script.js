@@ -222,3 +222,18 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+function showSolution(index) {
+  let menu = document.querySelectorAll(".solution-menu li");
+  let boxes = document.querySelectorAll(".solution-box");
+
+  menu.forEach((m, i) => {
+    m.classList.remove("active");
+    boxes[i].classList.remove("active");
+  });
+
+  menu[index].classList.add("active");
+  boxes[index].classList.add("active");
+}
+
+
+
