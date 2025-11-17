@@ -23,11 +23,15 @@ a:hover {
 }
 
 .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: #ffffff; /* White background */
-    padding: 15px 20px;
+    padding: 8px 5px;
     color: #000000; /* Black text */
     border-radius: 15px;
     backdrop-filter: blur(10px); /* Glassmorphism */
@@ -1891,6 +1895,7 @@ ol li {
     font-size: 1.05rem;
   }
 }
+
 
 
 
