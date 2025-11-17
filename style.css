@@ -1559,14 +1559,14 @@ ol li {
 }
 
 /* Grid Layout */
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto;
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
 }
-
+    
 /* Individual Service Card */
 .service-card {
   background: #fff;
@@ -1624,7 +1624,7 @@ ol li {
 
 
 /* Mobile me card chhota hoga */
-@media (max-width: 571px) {
+@media (max-width: 600px) {
     .service-card {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -1891,6 +1891,7 @@ ol li {
     font-size: 1.05rem;
   }
 }
+
 
 
 
