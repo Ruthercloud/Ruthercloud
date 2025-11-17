@@ -140,7 +140,7 @@ header nav ul li a:hover {
   padding: 60px 20px;
   background: 
     linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)),
-    url("udaipur.jpg") center/cover no-repeat;
+    url("Udaipur .jpg") center/cover no-repeat;
   overflow: hidden;
   color: #fff;
 }
@@ -1882,6 +1882,7 @@ ol li {
     font-size: 1.05rem;
   }
 }
+
 
 
 
