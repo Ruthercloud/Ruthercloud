@@ -1623,6 +1623,15 @@ ol li {
 }
 
 
+/* Mobile me card chhota hoga */
+@media (max-width: 571px) {
+    .service-card {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .service-card h3 {
+        font-size: 1rem;
+    }
+}
 
 /* Home Software Company Section */
 .home-software-company {
@@ -1882,6 +1891,7 @@ ol li {
     font-size: 1.05rem;
   }
 }
+
 
 
 
