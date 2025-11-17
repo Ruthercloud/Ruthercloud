@@ -1269,75 +1269,151 @@ header nav ul li a:hover {
 }
 
 
-/* Solutions Section */
-.solutions {
-  max-width: 1100px;
-  margin: 70px auto;
-  padding: 20px;
-  text-align: center;
-  font-family: 'Arial', sans-serif;
+/* MAIN SECTION */
+.solutions-section {
+  background: #1E90FF;
+  padding: 80px 20px;       /* corners se door kar diya */
 }
 
-.solutions h2 {
-  font-size: 2.2rem;
-  color: #1a1a1a;
-  margin-bottom: 40px;
-  font-weight: 700;
-}
-
-/* Solutions Grid */
+/* WRAPPER */
 .solutions-container {
+  max-width: 1050px;        /* center me rakha */
+  margin: auto;
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  justify-content: center;   /* LEFT + RIGHT center */
+}
+
+/* LEFT SIDE */
+.solutions-left {
+  text-align: center;        /* title + paragraph center */
+  flex: 1;
+}
+
+.solutions-left h2 {
+  font-size: 36px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.solutions-left p {
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+/* MENU */
+.solution-menu {
+  list-style: none;
+  padding: 0;
+  margin: auto;
+  max-width: 350px;          /* center me fixed width */
+}
+
+.solution-menu li {
+  font-size: 17px;
+  padding: 15px 20px;
+  background: #111;
+  border-left: 5px solid transparent;
+  margin-bottom: 12px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 8px;
+  text-align: center;         /* menu text center */
+}
+
+.solution-menu li.active {
+  background: #fff;
+  color: red;
+}
+
+/* RIGHT SIDE */
+.solutions-right {
+  flex: 1;
+  text-align: center;         /* heading + text + img center */
+}
+
+.solution-box {
+  display: none;
+  animation: fade 0.5s ease;
+}
+
+.solution-box.active {
+  display: block;
+}
+
+/* Image */
+.sol-image {
+  width: 420px;
+  max-width: 100%;
+  margin: 0 auto 25px;
+  display: block;
+}
+
+/* Headings + Text */
+.solution-box h3 {
+  color: #fff;
+  font-size: 28px;
+}
+
+.solution-box p {
+  color: #fff;
+  margin: 15px auto 25px;
+  max-width: 600px;           /* paragraph center slim */
+}
+
+/* FEATURES */
+.features {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  color: #fff;
+  font-weight: bold;
+  margin: 0 auto 25px;
+  max-width: 450px;           /* center me compact */
 }
 
-/* Each Solution Item */
-.solution-item {
-  background: #ffffff;
-  border-radius: 14px;
-  padding: 30px 25px;
-  text-align: center;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* BUTTONS */
+.sol-btns {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
-.solution-item:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 22px rgba(0, 120, 255, 0.2);
+.btn-read,
+.btn-demo {
+  padding: 10px 25px;
+  border: 2px solid #fff;
+  color: #fff;
+  border-radius: 5px;
 }
 
-.solution-item h3 {
-  font-size: 1.3rem;
-  color: #222;
-  margin-bottom: 15px;
-}
-
-.solution-item p {
-  font-size: 1rem;
-  color: #555;
-  line-height: 1.6;
-  margin: 0;
-}
-
-/* Responsive */
+/* ---- MOBILE RESPONSIVE ---- */
 @media (max-width: 768px) {
-  .solutions h2 {
-    font-size: 1.8rem;
+  .solutions-container {
+    flex-direction: column;
+    gap: 40px;
   }
 
-  .solution-item {
-    padding: 20px;
+  .sol-image {
+    width: 100%;
+    max-width: 350px;
   }
 
-  .solution-item h3 {
-    font-size: 1.2rem;
+  .features {
+    grid-template-columns: 1fr;
   }
 
-  .solution-item p {
-    font-size: 0.95rem;
+  .solution-menu {
+    max-width: 100%;
+  }
+
+  .solution-box h3 {
+    font-size: 24px;
   }
 }
+
 
 
 
@@ -1544,98 +1620,79 @@ ol li {
 /* =========================
    Services Overview
 ========================= */
-.services-overview {
-  padding: 50px 20px;
-  background: #f8faff;
+/* Kansoft Style Services Section */
+.kansoft-style {
+  padding: 60px 0;
   text-align: center;
 }
 
-.services-overview h2 {
-  font-size: 2rem;
-  color: #004aad;
-  margin-bottom: 10px;
+.kansoft-style h2 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 35px;
 }
 
-.services-overview p {
-  font-size: 1.1rem;
-  color: #555;
-  margin-bottom: 40px;
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 25px;
+  max-width: 950px;
+  margin: 0 auto;
 }
 
-/* Grid Layout */
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    max-width: 900px;
-    margin: 0 auto;
-}
-    
-/* Individual Service Card */
 .service-card {
-  background: #fff;
-  padding: 20px;
-  border-radius: 15px;
-  transition: transform 0.3s, box-shadow 0.3s;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-}
-
-.service-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 18px;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  transition: 0.3s ease;
 }
 
 .service-card img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 12px;
-  margin-bottom: 15px;
-  transition: transform 0.4s ease;
-}
-
-.service-card img:hover {
-  transform: scale(1.05);
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 12px;
 }
 
 .service-card h3 {
-  font-size: 1.2rem;
-  color: #004aad;
-  margin-top: 10px;
+  font-size: 18px;
+  font-weight: 800;
+  color: #333;
 }
 
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 12px 22px rgba(0,0,0,0.15);
+}
 
-/* Services Button */
+/* Check All Services Button */
 .services-btn {
-  text-align: center;
   margin-top: 30px;
 }
 
 .services-btn .btn {
-  display: inline-block;
-  background: #004aad;
+  background: #e40017;
   color: #fff;
-  text-decoration: none;
-  padding: 12px 25px;
-  border-radius: 8px;
-  font-weight: bold;
-  transition: background 0.3s, transform 0.3s;
+  padding: 12px 28px;
+  border-radius: 6px;
+  font-weight: 600;
+  display: inline-block;
 }
 
-.services-btn .btn:hover {
-  background: #003080;
-  transform: translateY(-3px);
-}
-
-
-/* Mobile me card chhota hoga */
 @media (max-width: 600px) {
-    .service-card {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .service-card h3 {
-        font-size: 1rem;
-    }
+  .services-grid {
+    grid-template-columns: 2, 1fr;
+    gap: 20px;
+  }
+
+  .service-card {
+    padding: 15px;
+  }
 }
+
+
 
 /* Home Software Company Section */
 .home-software-company {
@@ -1895,6 +1952,7 @@ ol li {
     font-size: 1.05rem;
   }
 }
+
 
 
 
