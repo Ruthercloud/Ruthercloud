@@ -236,4 +236,11 @@ function showSolution(index) {
 }
 
 
+function toggleWA() {
+  var box = document.getElementById("wa-box");
+  box.style.display = (box.style.display === "flex") ? "none" : "flex";
+}
+
+
+
 
