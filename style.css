@@ -1988,6 +1988,100 @@ ol li {
 
 
 
+/* Floating Button */
+#wa-button {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 60px;
+  height: 60px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: 0.3s;
+}
+
+#wa-button img {
+  width: 35px;
+}
+
+/* Chat Box */
+#wa-box {
+  position: fixed;
+  bottom: 100px;
+  right: 25px;
+  width: 320px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  display: none;
+  flex-direction: column;
+  z-index: 9999;
+  overflow: hidden;
+  animation: fadeIn 0.3s ease;
+}
+
+/* Header */
+.wa-header {
+  background: #128C7E;
+  padding: 15px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wa-header .wa-icon {
+  width: 28px;
+  margin-right: 8px;
+}
+
+.wa-close {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Content */
+.wa-content {
+  padding: 20px;
+  color: #555;
+  font-size: 15px;
+}
+
+.wa-btn {
+  background: #25D366;
+  padding: 12px;
+  text-align: center;
+  color: white;
+  font-size: 17px;
+  text-decoration: none;
+  display: block;
+  font-weight: bold;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+  #wa-box {
+    width: 90%;
+    right: 5%;
+    bottom: 100px;
+  }
+}
+
 
 
 
