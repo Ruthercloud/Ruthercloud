@@ -1613,13 +1613,6 @@ ol li {
 
 
 
-
-
-
-
-/* =========================
-   Services Overview
-========================= */
 /* =========================
    Services Overview
 ========================= */
@@ -1713,11 +1706,24 @@ ol li {
 @media (max-width: 480px) {
 
   .rc-grid {
-    grid-template-columns: repeat(1, 1fr); /* Small mobile = one card per row */
+    grid-template-columns: repeat(2, 1fr); /* Mobile = 2 cards per row */
+    gap: 20px;
+  }
+
+  .rc-card {
+    padding: 15px;
+  }
+
+  .rc-card img {
+    border-radius: 8px;
+  }
+
+  .rc-title {
+    font-size: 22px;
+    margin-bottom: 25px;
   }
 
 }
-
 
 
 /* Home Software Company Section */
@@ -1978,6 +1984,7 @@ ol li {
     font-size: 1.05rem;
   }
 }
+
 
 
 
