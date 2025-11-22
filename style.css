@@ -1269,151 +1269,134 @@ header nav ul li a:hover {
 }
 
 
-/* MAIN SECTION */
-.solutions-section {
-  background: #1E90FF;
-  padding: 80px 20px;       /* corners se door kar diya */
+
+/* Section */
+.rc-solutions {
+  padding: 70px 20px;
+  background: #f6f8fc;
+  text-align: center;
 }
 
-/* WRAPPER */
-.solutions-container {
-  max-width: 1050px;        /* center me rakha */
-  margin: auto;
-  display: flex;
-  gap: 50px;
-  align-items: center;
-  justify-content: center;   /* LEFT + RIGHT center */
-}
-
-/* LEFT SIDE */
-.solutions-left {
-  text-align: center;        /* title + paragraph center */
-  flex: 1;
-}
-
-.solutions-left h2 {
-  font-size: 36px;
-  color: #fff;
-  margin-bottom: 10px;
-}
-
-.solutions-left p {
-  color: #fff;
-  margin-bottom: 30px;
-}
-
-/* MENU */
-.solution-menu {
-  list-style: none;
-  padding: 0;
-  margin: auto;
-  max-width: 350px;          /* center me fixed width */
-}
-
-.solution-menu li {
-  font-size: 17px;
-  padding: 15px 20px;
-  background: #111;
-  border-left: 5px solid transparent;
-  margin-bottom: 12px;
-  color: #fff;
-  cursor: pointer;
-  transition: 0.3s;
-  border-radius: 8px;
-  text-align: center;         /* menu text center */
-}
-
-.solution-menu li.active {
-  background: #fff;
-  color: red;
-}
-
-/* RIGHT SIDE */
-.solutions-right {
-  flex: 1;
-  text-align: center;         /* heading + text + img center */
-}
-
-.solution-box {
-  display: none;
-  animation: fade 0.5s ease;
-}
-
-.solution-box.active {
-  display: block;
-}
-
-/* Image */
-.sol-image {
-  width: 420px;
-  max-width: 100%;
-  margin: 0 auto 25px;
-  display: block;
-}
-
-/* Headings + Text */
-.solution-box h3 {
-  color: #fff;
+/* Title */
+.rc-sol-title {
   font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #222;
 }
 
-.solution-box p {
-  color: #fff;
-  margin: 15px auto 25px;
-  max-width: 600px;           /* paragraph center slim */
+.rc-sol-sub {
+  color: #555;
+  font-size: 16px;
+  margin-bottom: 40px;
 }
 
-/* FEATURES */
-.features {
+/* Grid */
+.rc-sol-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
+  gap: 30px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Card */
+.rc-sol-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 22px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.07);
+  transition: 0.3s ease;
+  border: 1px solid #eaeaea;
+}
+
+.rc-sol-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.15);
+  border-color: #cfd6ff;
+}
+
+.rc-sol-card img {
+  width: 100%;
+  max-width: 180px;
+  margin: auto;
+  margin-bottom: 15px;
+}
+
+.rc-sol-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #1d1d1d;
+}
+
+.rc-sol-card p {
+  color: #666;
+  font-size: 15px;
+  line-height: 22px;
+}
+
+/* Button */
+.rc-sol-btn-box {
+  margin-top: 35px;
+}
+
+.rc-sol-btn {
+  background: #004aad;
   color: #fff;
-  font-weight: bold;
-  margin: 0 auto 25px;
-  max-width: 450px;           /* center me compact */
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
 }
 
-/* BUTTONS */
-.sol-btns {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
+.rc-sol-btn:hover {
+  background: #003b8b;
 }
 
-.btn-read,
-.btn-demo {
-  padding: 10px 25px;
-  border: 2px solid #fff;
-  color: #fff;
-  border-radius: 5px;
-}
-
-/* ---- MOBILE RESPONSIVE ---- */
+/* Mobile */
 @media (max-width: 768px) {
-  .solutions-container {
-    flex-direction: column;
-    gap: 40px;
+
+  .rc-sol-grid {
+    grid-template-columns: repeat(2, 1fr); /* Mobile = 2 cards */
+    gap: 20px;
   }
 
-  .sol-image {
-    width: 100%;
-    max-width: 350px;
+  .rc-sol-card {
+    padding: 15px;
   }
 
-  .features {
-    grid-template-columns: 1fr;
+  .rc-sol-card img {
+    max-width: 150px;
   }
 
-  .solution-menu {
-    max-width: 100%;
-  }
-
-  .solution-box h3 {
+  .rc-sol-title {
     font-size: 24px;
   }
 }
 
+@media (max-width: 480px) {
+
+  .rc-sol-grid {
+    grid-template-columns: repeat(2, 1fr); /* Small Mobile = still 2 cards */
+    gap: 15px;
+  }
+
+  .rc-sol-card {
+    padding: 12px;
+  }
+
+  .rc-sol-card img {
+    max-width: 130px;
+  }
+
+  .rc-sol-title {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+}
 
 
 
@@ -2081,6 +2064,7 @@ ol li {
     bottom: 100px;
   }
 }
+
 
 
 
