@@ -2079,14 +2079,12 @@ ol li {
   font-weight: 500;
 }
 
-.breadcrumb a:hover {
-  text-decoration: underline;
-}
 
 .breadcrumb span {
   color: #333;
   font-weight: 600;
 }
+
 
 
 
