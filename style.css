@@ -2067,6 +2067,28 @@ ol li {
 
 
 
+.breadcrumb {
+  margin: 20px 0;
+  font-size: 16px;
+  color: #666;
+}
+
+.breadcrumb a {
+  color: #003080; /* Ruthercloud main theme color (change if needed) */
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb span {
+  color: #333;
+  font-weight: 600;
+}
+
+
 
 
 
