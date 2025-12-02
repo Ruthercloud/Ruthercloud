@@ -9,31 +9,131 @@
 
 <body>
 
-<header>
+  <header> 
   <nav class="navbar" role="navigation">
-      <div class="logo">
-  <a href="index.html">
-    <img src="ruther.jpg" alt="RutherCloud Logo" 
-         style="height: clamp(25px, 1vw, 30px);">
-  </a>
-</div>
-     <button class="hamburger"
-            type="button"
-            aria-label="Toggle navigation menu"
-            aria-controls="nav-links"
-            aria-expanded="false"
-            onclick="toggleMenu()"></button>
 
+    <!-- Logo -->
+    <div class="logo">
+      <a href="index.html">
+        <img src="ruther.jpg" alt="RutherCloud Logo" 
+        style="height: clamp(25px, 1vw, 30px);">
+      </a>
+    </div>
+
+    <!-- Mobile Icon -->
+    <button class="hamburger"
+      type="button"
+      aria-label="Toggle navigation menu"
+      aria-controls="mobile-menu"
+      aria-expanded="false"
+      onclick="openMobileMenu()"></button>
+
+    <!-- DESKTOP NAV -->
     <ul class="nav-links" id="nav-links">
+
       <li><a href="about.html">About Us</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="solutions.html" class="active">Solutions</a></li>
+
+      <!-- Services Desktop Mega Menu -->
+      <li class="dropdown">
+        <a href="javascript:void(0)">Services</a>
+
+        <div class="mega-menu">
+          <div class="mega-column">
+            <h4>Data & Analytics</h4>
+            <a href="ai-ml-services.html">AI/ML Services</a>
+            <a href="business-intelligence.html">Business Intelligence</a>
+            <a href="data-analytics.html">Data Analytics</a>
+          </div>
+
+          <div class="mega-column">
+            <h4>Software & Application</h4>
+            <a href="custom-software.html">Custom Software Development</a>
+            <a href="mobile-app.html">Mobile Application Development</a>
+            <a href="mpos-services.html">mPOS Services</a>
+            <a href="enterprise-integration.html">Integration Services</a>
+          </div>
+
+          <div class="mega-column">
+            <h4>Consulting & Strategy</h4>
+            <a href="technology-consulting.html">Technology Consulting</a>
+            <a href="cloud-migration.html">Cloud Migration Services</a>
+          </div>
+          
+     <li class="dropdown">
+    <a href="javascript:void(0)">Solutions</a>
+
+    <div class="mega-menu solutions-menu">
+
+        <div class="mega-column">
+            <a href="teleshopping-crm.html">Teleshopping and Omnichannel CRM</a>
+            <a href="imekart-ecommerce.html">IMEKART E-commerce</a>
+            <a href="custom-erp.html">Custom ERP</a>
+        </div>
+
+        <div class="mega-column">
+            <a href="distribution-management.html">Distribution Management System</a>
+            <a href="transport-management.html">Transport Management System</a>
+            <a href="warehouse-management.html">Warehouse Management System</a>
+        </div>
+
+    </div>
+</li>
       <li><a href="portfolio.html">Portfolio</a></li>
       <li><a href="technologies.html">Technologies</a></li>
       <li><a href="contact.html">Contact Us</a></li>
+
+
     </ul>
   </nav>
 </header>
+
+
+<!-- MOBILE FULLPAGE MENU -->
+<div class="mobile-menu" id="mobile-menu">
+
+  <div class="mobile-close" onclick="closeMobileMenu()">✕</div>
+  
+  <li><a href="about.html">About Us</a></li>
+
+  <div class="m-dropdown">
+    <div class="m-title">Services ▾</div>
+   <div class="m-submenu">
+    <h4>Data & Analytics</h4>
+      <a href="ai-ml-services.html">AI/ML Services</a>
+            <a href="business-intelligence.html">Business Intelligence</a>
+            <a href="data-analytics.html">Data Analytics</a>
+
+<h4>Software & Application</h4>
+     <a href="custom-software.html">Custom Software Development</a>
+            <a href="mobile-app.html">Mobile Application Development</a>
+            <a href="mpos-services.html">mPOS Services</a>
+            <a href="enterprise-integration.html">Integration Services</a>
+
+            <h4>Consulting & Strategy</h4>
+        <a href="technology-consulting.html">Technology Consulting</a>
+        <a href="cloud-migration.html">Cloud Migration Services</a>
+    </div>
+  </div>
+
+  <div class="m-dropdown">
+    <div class="m-title">Solutions ▾</div>
+    <div class="m-submenu">
+              <a href="teleshopping-crm.html">Teleshopping and Omnichannel CRM</a>
+            <a href="imekart-ecommerce.html">IMEKART E-commerce</a>
+            <a href="custom-erp.html">Custom ERP</a>
+        <a href="distribution-management.html">Distribution Management System</a>
+            <a href="transport-management.html">Transport Management System</a>
+            <a href="warehouse-management.html">Warehouse Management System</a>
+    </div>
+  </div>
+
+
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="technologies.html">Technologies</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+
+
+</div>
 
 
  
@@ -180,6 +280,7 @@
 <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
