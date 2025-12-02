@@ -243,4 +243,73 @@ function toggleWA() {
 
 
 
+/* OPEN MOBILE MENU */
+function openMobileMenu() {
+  document.getElementById("mobile-menu").style.right = "0";
+  document.querySelector(".hamburger").setAttribute("aria-expanded", "true");
+}
+
+/* CLOSE MOBILE MENU */
+function closeMobileMenu() {
+  document.getElementById("mobile-menu").style.right = "-100%";
+  document.querySelector(".hamburger").setAttribute("aria-expanded", "false");
+}
+
+/* MOBILE DROPDOWNS */
+document.querySelectorAll(".m-title").forEach(title => {
+  title.addEventListener("click", function () {
+    this.parentElement.classList.toggle("active");
+  });
+});
+
+
+
+function toggleMenu() {
+  const nav = document.getElementById("nav-links");
+  const button = document.querySelector(".hamburger");
+
+  nav.classList.toggle("active");
+
+  const expanded = button.getAttribute("aria-expanded") === "true";
+  button.setAttribute("aria-expanded", !expanded);
+}
+
+// Mobile Dropdown for Mega Menu
+document.querySelectorAll(".dropdown > a").forEach(item => {
+  item.addEventListener("click", function(e) {
+    if (window.innerWidth <= 768) {
+      e.preventDefault();
+      this.parentElement.classList.toggle("active");
+    }
+  });
+});
+
+
+/* OPEN MOBILE MENU */
+function openMobileMenu() {
+  document.getElementById("mobile-menu").style.right = "0";
+  document.querySelector(".hamburger").setAttribute("aria-expanded", "true");
+}
+
+/* CLOSE MOBILE MENU */
+function closeMobileMenu() {
+  document.getElementById("mobile-menu").style.right = "-100%";
+  document.querySelector(".hamburger").setAttribute("aria-expanded", "false");
+}
+
+
+function openMobileMenu() {
+  const mobileMenu = document.getElementById("mobile-menu");
+  mobileMenu.style.right = "0";
+
+  // close all dropdowns when mobile menu opens
+  document.querySelectorAll(".m-dropdown").forEach(drop => {
+    drop.classList.remove("active");
+  });
+
+  document.querySelector(".hamburger").setAttribute("aria-expanded", "true");
+}
+
+
+
 
