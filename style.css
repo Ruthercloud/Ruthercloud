@@ -49,6 +49,33 @@ a:hover {
     color: transparent;
 }
 
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff; /* White background */
+    padding: 8px 5px;
+    color: #000000; /* Black text */
+    border-radius: 15px;
+    backdrop-filter: blur(10px); /* Glassmorphism */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1), 
+                -5px -5px 15px rgba(0, 196, 204, 0.05); /* Soft shadow */
+    transform: perspective(1000px) translateZ(0);
+}
+
+.logo {
+    font-size: 28px; /* Bold typography */
+    font-weight: 700;
+    background: linear-gradient(45deg, Black); /* RutherCloud gradient */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
 .navbar, .nav-menu {
   position: relative;
   z-index: 100; /* nav aur menu sabse upar */
@@ -76,6 +103,12 @@ a:hover {
   font-weight: 600;
 }
 
+/* Jab open ho to ✕ dikhaye */
+.hamburger[aria-expanded="true"]::before {
+  content: "→";
+  transform: rotate(90deg);
+  color: #222; /* Red for close */
+}
 
 /* Button base */
 .hamburger {
@@ -102,12 +135,6 @@ a:hover {
   color: #222; /* Teal accent */
 }
 
-/* Jab open ho to ✕ dikhaye */
-.hamburger[aria-expanded="true"]::before {
-  content: "✕";
-  transform: rotate(90deg);
-  color: #222; /* Red for close */
-}
 
 /* Mobile pe button dikhana */
 @media (max-width: 768px) {
@@ -131,6 +158,305 @@ a:hover {
 header nav ul li a:hover {
     color: #1E90FF; /* Hover teal */
 }
+
+
+/* Your existing CSS remains SAME except these added upgrades */
+
+/* Dropdown wrapper */
+.dropdown {
+  position: static !important;   /* IMPORTANT FIX */
+}
+
+/* Mega menu */
+.mega-menu {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 95%;
+  max-width: 1200px;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  display: none;
+  grid-template-columns: repeat(3, 1fr);
+  z-index: 1000;
+}
+
+
+/* Show on Hover (Desktop) */
+.dropdown:hover .mega-menu {
+  display: grid;
+}
+
+/* Column Styles */
+.mega-column h4 {
+  font-size: 16px;
+  color: #1E90FF;
+  margin-bottom: 10px;
+}
+.mega-column a {
+  display: block;
+  padding: 5px 0;
+  color: #000;
+  text-decoration: none;
+}
+.mega-column a:hover {
+  color: #1E90FF;
+}
+
+/* MOBILE DROPDOWN FIX */
+@media (max-width: 768px) {
+
+  .dropdown .mega-menu {
+    position: relative;
+    width: 100%;
+    left: 0;
+    transform: none;
+    box-shadow: none;
+    grid-template-columns: 1fr;
+    display: none;
+    background: #ffffff;
+    padding: 10px 15px;
+  }
+
+  /* Mobile show on click */
+  .dropdown.active .mega-menu {
+    display: block;
+  }
+
+  /* Make "Services" clickable accordion */
+  .dropdown > a {
+    width: 100%;
+    display: block;
+    padding: 12px 0;
+  }
+}
+
+
+
+
+
+
+
+
+/* MOBILE MENU PANEL - Kansoft Style */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100vh;
+  background: #ffffff; /* White background like Kansoft */
+  color: #444;
+  padding: 30px 25px;
+  z-index: 2000;
+  transition: 0.35s ease;
+  overflow-y: auto;
+}
+
+/* Close Button */
+.mobile-close {
+  font-size: 32px;
+  color: #555;
+  position: absolute;
+  top: 18px;
+  right: 25px;
+  cursor: pointer;
+}
+
+/* Top Level Links */
+.mobile-menu a {
+  display: block;
+  font-size: 22px;
+  font-weight: 600;
+  margin: 18px 0;
+  color: #444;
+  text-decoration: none;
+}
+
+/* Dropdown Wrapper */
+.m-dropdown {
+  margin-bottom: 25px;
+  border-bottom: 1px solid #eee; /* kansoft divider */
+  padding-bottom: 10px;
+}
+
+/* Dropdown Title */
+.m-title {
+  font-size: 22px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #555;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Dropdown Arrow (like Kansoft) */
+.m-title::after {
+  font-size: 18px;
+  color: #777;
+  transition: 0.3s;
+}
+
+/* On Active — Arrow Rotate */
+.m-dropdown.active .m-title::after {
+  transform: rotate(180deg);
+}
+
+/* Submenu */
+.m-submenu {
+  display: none;
+  padding-left: 10px;
+  margin-top: 12px;
+}
+
+.m-submenu a {
+  font-size: 18px;
+  font-weight: 400;
+  color: #333;
+  padding: 8px 0;
+}
+
+/* Show Submenu */
+.m-dropdown.active .m-submenu {
+  display: block;
+}
+
+
+/* === DESKTOP MEGA MENU SAME AS BEFORE === */
+
+.dropdown { position: relative; }
+
+.mega-menu {
+  position: absolute;
+  top: 55px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+  width: 900px;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  z-index: 1000;
+}
+
+.dropdown:hover .mega-menu {
+  display: grid;
+}
+
+.mega-column h4 {
+  font-size: 18px;
+  color: #004cff;
+  margin-bottom: 10px;
+}
+
+.mega-column a {
+  display: block;
+  padding: 6px 0;
+  color: #000;
+  text-decoration: none;
+}
+
+.mega-column a:hover {
+  color: #004cff;
+}
+
+/* MOBILE REMOVE DESKTOP MENU */
+@media (max-width: 768px) {
+  .nav-links { display: none !important; }
+  .hamburger { display: block; }
+}
+
+
+
+/* FIX: Mega menu should not close on small mouse movement */
+.dropdown:hover .mega-menu,
+.mega-menu:hover {
+  display: grid !important;
+}
+
+/* FIX: Menu stays connected to nav */
+.dropdown {
+  position: relative;
+}
+
+.mega-menu {
+  top: 90%;
+}
+
+/* FIX: Remove gap between Services link and mega menu */
+.dropdown > a {
+  padding-bottom: 18px;
+}
+
+
+
+/* FIX: Mega menu always centered under Services */
+.dropdown {
+    position: relative;
+}
+
+
+.mega-column {
+        /* equal height columns */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+   gap: 20px 40px; /* row-gap column-gap */
+}
+
+
+
+
+
+/* SOLUTIONS MEGA MENU (2 COLUMN) */
+/* COMPACT SOLUTIONS MEGA MENU */
+.solutions-menu {
+  position: absolute;
+  top: 55px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+  background: white;
+   width: 60% !important;             /* Smaller width */
+    max-width: 800px !important;       /* Limit size */
+    padding: 25px 30px !important;     /* Less padding */
+    border-radius: 18px !important;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  grid-template-columns: repeat(2, 1fr);
+   gap: 25px 50px !important;
+  z-index: 1000;
+}
+
+
+
+/* Equal column height */
+.solutions-menu .mega-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+   gap: 20px 40px; /* row-gap column-gap */
+}
+
+
+
+
+.sloutions-mega-column a {
+  display: block;
+  padding: 5px 0;
+  color: #000;
+  text-decoration: none;
+}
+.sloutions-mega-column a:hover {
+  color: #1E90FF;
+}
+
+
 
 
 /* Hero Section */
@@ -2084,6 +2410,7 @@ ol li {
   color: #333;
   font-weight: 600;
 }
+
 
 
 
