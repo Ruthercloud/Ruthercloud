@@ -679,12 +679,12 @@ header nav ul li a:hover {
 }
 
 .founder img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  border-radius: 8px;   /* Cube look: thoda rounded corner.
+                          Agar bilkul perfect cube chahiye to 0 kar dena */
+                          border: 3px solid #1E90FF;
   object-fit: cover;
-  border: 3px solid #1E90FF;
-  box-shadow: 0 0 8px rgba(30, 144, 255, 0.3);
 }
 
 .founder h3 {
@@ -2393,23 +2393,47 @@ ol li {
 
 
 
+.breadcrumb-box {
+    width: 90%;
+    padding: 60px 20px;
+    border-radius: 35px;
+    background: linear-gradient(135deg, #cfd5df 0%, #e5e5e5 50%);
+    text-align: center;
+    border: 2px solid #d4d4d4;
+    box-sizing: border-box;
+    margin: 20px auto;
+}
+
+/* Title styling */
+.page-title {
+    font-size: 48px;
+    font-weight: 700;
+    color: #0e1330;
+    margin-bottom: 15px;
+}
+
+.page-title span {
+    color: #0a57ff; /* Blue gradient ka matching color */
+}
+
+/* Breadcrumb styling */
 .breadcrumb {
-  margin: 20px 0;
-  font-size: 16px;
-  color: #666;
+    font-size: 18px;
+    color: #666;
+    font-weight: 500;
 }
 
 .breadcrumb a {
-  color: #003080; /* Ruthercloud main theme color (change if needed) */
-  text-decoration: none;
-  font-weight: 500;
+    color: #003080;
+    text-decoration: none;
+    font-weight: 600;
 }
-
 
 .breadcrumb span {
-  color: #333;
-  font-weight: 600;
+    color: #333;
+    font-weight: 600;
 }
+
 
 
 
