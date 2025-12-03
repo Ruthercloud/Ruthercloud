@@ -2394,7 +2394,7 @@ ol li {
 
 
 .breadcrumb-box {
-    width: 90%;
+    width: 95%;
     padding: 60px 20px;
     border-radius: 35px;
     background: linear-gradient(135deg, #cfd5df 0%, #e5e5e5 50%);
@@ -2433,6 +2433,7 @@ ol li {
     color: #333;
     font-weight: 600;
 }
+
 
 
 
