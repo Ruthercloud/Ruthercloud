@@ -105,7 +105,6 @@ a:hover {
 
 /* Jab open ho to ✕ dikhaye */
 .hamburger[aria-expanded="true"]::before {
-  content: "→";
   transform: rotate(90deg);
   color: #222; /* Red for close */
 }
@@ -2436,6 +2435,76 @@ ol li {
 
 
 
+/* Trusted Brands Section */
+.trusted-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.trusted-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #111;
+}
+
+.trusted-logos {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  align-items: center;
+}
+
+.logo-row {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.logo-row img {
+  height: 50px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.8;
+  transition: 0.3s ease;
+}
+
+.logo-row img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* Responsive *//* Trusted Brands – MOBILE FIX */
+@media (max-width: 600px) {
+
+  .trusted-section {
+    padding: 40px 15px;
+  }
+
+  .trusted-section h2 {
+    font-size: 1.6rem;
+    margin-bottom: 25px;
+  }
+
+  .trusted-logos {
+    gap: 25px;
+  }
+
+  .logo-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    justify-items: center;
+  }
+
+  .logo-row img {
+    height: 32px; /* smaller logos like your screenshot */
+    opacity: 0.9;
+    filter: grayscale(100%);
+  }
+}
 
 
 
