@@ -916,9 +916,9 @@ header nav ul li a:hover {
 
 .project img {
   width: 100%;
-  height: auto;              /* image ki asli height maintain hogi */
-  max-height: 300px;         /* optional: ek limit rakhne ke liye */
-  object-fit: contain;       /* pura image dikhega */
+  height: 400px;              /* image ki asli height maintain hogi */
+  max-height: 400px;         /* optional: ek limit rakhne ke liye */
+  object-fit: cover;       /* pura image dikhega */
   display: block;
   background: #f4f4f4;       /* agar image chhoti ho to bg fill */
   transition: transform 0.3s ease;
@@ -2505,6 +2505,7 @@ ol li {
     filter: grayscale(100%);
   }
 }
+
 
 
 
