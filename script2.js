@@ -42,24 +42,24 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
 
-// Count-up animation for stats
 const counters = document.querySelectorAll(".counter");
-const speed = 400; // smaller = faster
+const speed = 400; 
 
 function runCounter(counter) {
+  const value = +counter.getAttribute("data-target");
+  const increment = value / speed;
+
   const animate = () => {
-    const value = +counter.getAttribute("data-target");
     const data = +counter.innerText;
-    const increment = value / speed;
 
     if (data < value) {
       counter.innerText = Math.ceil(data + increment);
       setTimeout(animate, 10);
     } else {
-      // Custom suffix rule
-      if (value === 150 || value === 100 || value === 200 || value === 2) {
+      // Suffix logic
+      if ([150, 100, 200, 2].includes(value)) {
         counter.innerText = value + "+";
-      } else if (value === 96 || value === 85) {
+      } else if ([96, 85].includes(value)) {
         counter.innerText = value + "%";
       } else {
         counter.innerText = value;
@@ -67,28 +67,24 @@ function runCounter(counter) {
     }
   };
 
-  // reset before running again
   counter.innerText = "0";
   animate();
 }
 
-// Run all counters
-counters.forEach(runCounter);
+// ▶ RUN ONLY WHEN VISIBLE (never multiple times)
+const options = { threshold: 0.4 };  // 40% section visible
 
-
-
-// Run animation whenever counters come into view
-const observer = new IntersectionObserver((entries) => {
+const observer = new IntersectionObserver((entries, obs) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       runCounter(entry.target);
+      obs.unobserve(entry.target); // stop re-running
     }
   });
-}, { threshold: 0.5 }); // 50% visible hone par trigger hoga
+}, options);
 
-counters.forEach(counter => {
-  observer.observe(counter);
-});
+// Observe each counter
+counters.forEach(counter => observer.observe(counter));
 
 
 
@@ -309,6 +305,7 @@ function openMobileMenu() {
 
   document.querySelector(".hamburger").setAttribute("aria-expanded", "true");
 }
+
 
 
 
