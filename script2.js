@@ -242,6 +242,7 @@ function toggleWA() {
 }
 
 
+
 /* OPEN MOBILE MENU */
 function openMobileMenu() {
   document.getElementById("mobile-menu").style.right = "0";
@@ -308,7 +309,6 @@ function openMobileMenu() {
 
   document.querySelector(".hamburger").setAttribute("aria-expanded", "true");
 }
-
 
 
 
