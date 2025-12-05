@@ -94,37 +94,6 @@ counters.forEach(counter => {
 
   
 
-// Animated words for Hero Section
-const words = ["Affordable", "Customized", "Innovative", "Responsive"];
-let index = 0;
-
-function changeWord() {
-  const wordElement = document.getElementById("animated-word");
-  const underline = document.querySelector(".underline");
-
-  // Fade out + shrink underline
-  wordElement.style.opacity = 0;
-  underline.style.width = "0";
-
-  setTimeout(() => {
-    wordElement.textContent = words[index];
-    wordElement.style.opacity = 1;
-
-    // 👉 Calculate underline width based on word width
-    const wordWidth = wordElement.offsetWidth;
-    underline.style.width = wordWidth + "px";
-
-    index = (index + 1) % words.length;
-  }, 600); // fade-out duration
-}
-
-// Run every 3.5 seconds (like Kansoft)
-setInterval(changeWord, 3500);
-
-// ✅ First run only once
-window.addEventListener("load", () => {
-  changeWord();
-});
 
 
   
@@ -309,6 +278,7 @@ function openMobileMenu() {
 
   document.querySelector(".hamburger").setAttribute("aria-expanded", "true");
 }
+
 
 
 
