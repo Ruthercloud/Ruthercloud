@@ -239,14 +239,14 @@ header nav ul li a:hover {
 
 
 
-/* MOBILE MENU PANEL - Kansoft Style */
+/* MOBILE MENU PANEL */
 .mobile-menu {
   position: fixed;
   top: 0;
   right: -100%;
   width: 100%;
   height: 100vh;
-  background: #ffffff; /* White background like Kansoft */
+  background: #ffffff; 
   color: #444;
   padding: 30px 25px;
   z-index: 2000;
@@ -277,7 +277,7 @@ header nav ul li a:hover {
 /* Dropdown Wrapper */
 .m-dropdown {
   margin-bottom: 25px;
-  border-bottom: 1px solid #eee; /* kansoft divider */
+  border-bottom: 1px solid #eee; 
   padding-bottom: 10px;
 }
 
@@ -292,7 +292,7 @@ header nav ul li a:hover {
   align-items: center;
 }
 
-/* Dropdown Arrow (like Kansoft) */
+/* Dropdown Arrow  */
 .m-title::after {
   font-size: 18px;
   color: #777;
@@ -461,7 +461,7 @@ header nav ul li a:hover {
 /* Hero Section */
 .hero {
   position: relative;
-  min-height: 70vh; /* Kansoft jaisa compact look */
+  min-height: 70vh; 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -510,7 +510,7 @@ header nav ul li a:hover {
   margin-bottom: 35px;
 }
 
-/* Service Highlights (like Kansoft) */
+/* Service Highlights */
 .service-highlights {
   display: flex;
   flex-direction: column;
@@ -680,8 +680,8 @@ header nav ul li a:hover {
 .founder img {
   width: 300px;
   height: 300px;
-  border-radius: 8px;   /* Cube look: thoda rounded corner.
-                          Agar bilkul perfect cube chahiye to 0 kar dena */
+  border-radius: 8px;  
+                          
                           border: 3px solid #1E90FF;
   object-fit: cover;
 }
@@ -776,7 +776,7 @@ header nav ul li a:hover {
 
 .feedback-title {
     font-size: 2.2rem;
-    color: #1a1a1a; /* Kansoft Blue */
+    color: #1a1a1a; 
     margin-bottom: 50px;
     font-weight: 700;
 }
@@ -916,16 +916,16 @@ header nav ul li a:hover {
 
 .project img {
   width: 100%;
-  height: 400px;              /* image ki asli height maintain hogi */
-  max-height: 400px;         /* optional: ek limit rakhne ke liye */
-  object-fit: cover;       /* pura image dikhega */
+  height: 400px;              
+  max-height: 400px;        
+  object-fit: cover;       
   display: block;
-  background: #f4f4f4;       /* agar image chhoti ho to bg fill */
+  background: #f4f4f4;       
   transition: transform 0.3s ease;
 }
 
 .project:hover img {
-  transform: scale(1.02);   /* halka zoom effect */
+  transform: scale(1.02);  
 }
 
 /* Project Title */
@@ -1151,7 +1151,7 @@ header nav ul li a:hover {
 }
 .solutions-banner h1 {
   font-size: 2.5rem;
-  color: #0d47a1; /* Kansoft blue */
+  color: #0d47a1; 
   margin-bottom: 10px;
 }
 .solutions-banner p {
@@ -2135,10 +2135,10 @@ ol li {
   text-align: center;
   padding: 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  height: 320px; /* 👈 Fixed height for equal card size */
+  height: 320px; 
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Ensures button stays aligned */
+  justify-content: space-between; 
 }
 
 .service-card img {
@@ -2147,14 +2147,14 @@ ol li {
   margin: 0 auto 15px;
   border-radius: 12px;
   transition: transform 0.3s ease;
-  object-fit: contain; /* 👈 Keeps image ratio proper */
-  height: 120px; /* 👈 Ensures image height same */
+  object-fit: contain; 
+  height: 120px; 
 }
 
 .service-card h3 {
   font-size: 1.1rem;
   color: #004aad;
-  min-height: 45px; /* 👈 Ensures title height same */
+  min-height: 45px; 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2621,6 +2621,7 @@ ol li {
     font-size: 1.1rem;
   }
 }
+
 
 
 
