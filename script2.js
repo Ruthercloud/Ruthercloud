@@ -164,6 +164,54 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let index = 0;
 
+
+        // ===============================
+  // Mouse Drag / Swipe Support
+  // ===============================
+  let isDragging = false;
+  let startXMouse = 0;
+  let currentTranslate = 0;
+
+  track.addEventListener("mousedown", (e) => {
+    isDragging = true;
+    startXMouse = e.clientX;
+    track.style.cursor = "grabbing";
+    track.style.transition = "none"; // smooth drag ke liye
+  });
+
+  document.addEventListener("mousemove", (e) => {
+    if (!isDragging) return;
+    const diff = e.clientX - startXMouse;
+    track.style.transform = `translateX(calc(-${index * 100}% + ${diff}px))`;
+  });
+
+  document.addEventListener("mouseup", (e) => {
+    if (!isDragging) return;
+    isDragging = false;
+    track.style.cursor = "grab";
+    track.style.transition = "transform 0.6s ease";
+
+    const diff = e.clientX - startXMouse;
+
+    if (diff < -80) {
+      // drag left → next
+      index = (index + 1) % cards.length;
+    } else if (diff > 80) {
+      // drag right → previous
+      index = (index - 1 + cards.length) % cards.length;
+    }
+
+    updateSlider();
+  });
+
+  // Mouse leave safety
+  document.addEventListener("mouseleave", () => {
+    if (isDragging) {
+      isDragging = false;
+      updateSlider();
+    }
+  });
+
   // Dots create karna
   cards.forEach((_, i) => {
     const dot = document.createElement("span");
@@ -305,6 +353,7 @@ function openMobileMenu() {
 
   document.querySelector(".hamburger").setAttribute("aria-expanded", "true");
 }
+
 
 
 
