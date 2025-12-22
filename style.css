@@ -154,9 +154,7 @@ a:hover {
   .nav-links.active { display: flex; }
 }
 
-header nav ul li a:hover {
-    color: #1E90FF; /* Hover teal */
-}
+
 
 
 /* Your existing CSS remains SAME except these added upgrades */
@@ -850,7 +848,7 @@ header nav ul li a:hover {
 
 .feedback-dots span.active {
   width: 28px;
-  background: #00a884;
+  background: #1E90FF;
   border-radius: 20px;
 }
 
@@ -1028,14 +1026,6 @@ header nav ul li a:hover {
 }
 
 
-.feedback-card {
-    background: #E6E6E6;
-    border: 1px solid #CCCCCC;
-    border-radius: 15px;
-    padding: 20px;
-    max-width: 300px;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1), -4px -4px 10px rgba(30, 144, 255, 0.2);
-}
 
 .footer {
     background: linear-gradient(135deg, #FFFFFF, #E6E6E6);
@@ -2535,10 +2525,7 @@ ol li {
 
 
 
-.case-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-}
+
 
 /* Image */
 .case-image img {
@@ -2550,9 +2537,7 @@ ol li {
   transition: transform 0.4s ease;
 }
 
-.case-card:hover img {
-  transform: scale(1.05);
-}
+
 
 /* Content */
 .case-content h3 {
@@ -2606,6 +2591,7 @@ ol li {
     font-size: 1.1rem;
   }
 }
+
 
 
 
