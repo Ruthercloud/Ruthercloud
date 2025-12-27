@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Technologies | RUTHERCLOUD</title>
+<link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+       <header> 
+  <nav class="navbar" role="navigation">
+
+    <!-- Logo -->
+    <div class="logo">
+      <a href="/index.html">
+        <img src="/assets/images/ruthercloud.png" alt="RutherCloud Logo" 
+        style="height: clamp(25px, 1vw, 30px);">
+      </a>
+    </div>
+
+    <!-- Mobile Icon -->
+    <button class="hamburger"
+      type="button"
+      aria-label="Toggle navigation menu"
+      aria-controls="mobile-menu"
+      aria-expanded="false"
+      onclick="openMobileMenu()"></button>
+
+    <!-- DESKTOP NAV -->
+    <ul class="nav-links" id="nav-links">
+
+      <li><a href="/about.html">About Us</a></li>
+
+      <!-- Services Desktop Mega Menu -->
+      <li class="dropdown">
+        <a href="javascript:void(0)">Services</a>
+
+        <div class="mega-menu">
+          <div class="mega-column">
+            <h4>Data & Analytics</h4>
+            <a href="/services/ai-ml-services.html">AI/ML Services</a>
+            <a href="/services/business-intelligence.html">Business Intelligence</a>
+            <a href="/services/data-analytics.html">Data Analytics</a>
+          </div>
+
+          <div class="mega-column">
+            <h4>Software & Application</h4>
+            <a href="/services/custom-software.html">Custom Software Development</a>
+            <a href="/services/mobile-app.html">Mobile Application Development</a>
+            <a href="/services/mpos-services.html">mPOS Services</a>
+            <a href="/services/enterprise-integration.html">Integration Services</a>
+          </div>
+
+          <div class="mega-column">
+            <h4>Consulting & Strategy</h4>
+            <a href="/services/technology-consulting.html">Technology Consulting</a>
+            <a href="/services/cloud-migration.html">Cloud Migration Services</a>
+          </div>
+                   <div class="solutions-footer">
+  <a href="/services/index.html">Services</a>
+</div>
+     <li class="dropdown">
+    <a href="javascript:void(0)">Solutions</a>
+
+    <div class="mega-menu solutions-menu">
+
+        <div class="mega-column">
+            <a href="/solutions/teleshopping.html">Teleshopping and Omnichannel CRM</a>
+            <a href="/solutions/imekart-ecommerce.html">IMEKART E-commerce</a>
+            <a href="/solutions/custom-erp.html">Custom ERP</a>
+        </div>
+
+        <div class="mega-column">
+            <a href="/solutions/distribution-management.html">Distribution Management System</a>
+            <a href="/solutions/teleshopping.html">Transport Management System</a>
+            <a href="/solutions/warehouse-management.html">Warehouse Management System</a>
+
+        </div>
+
+   <div class="solutions-footer">
+  <a href="/solutions/index.html">solutions</a>
+</div>
+
+    </div>
+
+
+</li>
+      <li><a href="/portfolio/index.html">Portfolio</a></li>
+      <li><a href="/technologies.html">Technologies</a></li>
+          
+           <li><a href="/case-study/index.html">Case Study</a></li>
+      <li class="get-in-touch">
+  <a href="/contact.html">Get in Touch</a>
+</li>
+
+
+    </ul>
+  </nav>
+</header>
+
+
+<!-- MOBILE FULLPAGE MENU -->
+<div class="mobile-menu" id="mobile-menu">
+
+  <div class="mobile-close" onclick="closeMobileMenu()">✕</div>
+
+  <a href="/about.html" class="m-link">About Us</a>
+
+  <div class="m-dropdown">
+    <div class="m-title">Services</div>
+    <div class="m-submenu">
+
+      <h4>Data & Analytics</h4>
+      <a href="/services/ai-ml-services.html">AI/ML Services</a>
+      <a href="/services/business-intelligence.html">Business Intelligence</a>
+      <a href="/services/data-analytics.html">Data Analytics</a>
+
+      <h4>Software & Application</h4>
+      <a href="/services/custom-software.html">Custom Software Development</a>
+      <a href="/services/mobile-app.html">Mobile Application Development</a>
+      <a href="/services/mpos-services.html">mPOS Services</a>
+      <a href="/services/enterprise-integration.html">Integration Services</a>
+
+      <h4>Consulting & Strategy</h4>
+      <a href="/services/technology-consulting.html">Technology Consulting</a>
+      <a href="/services/cloud-migration.html">Cloud Migration Services</a>
+    </div>
+  </div>
+
+  <div class="m-dropdown">
+    <div class="m-title">Solutions</div>
+    <div class="m-submenu">
+      <a href="/solutions/teleshopping.html">Teleshopping and Omnichannel CRM</a>
+      <a href="/solutions/imekart-ecommerce.html">IMEKART E-commerce</a>
+      <a href="/solutions/custom-erp.html">Custom ERP</a>
+      <a href="/solutions/distribution-management.html">Distribution Management System</a>
+      <a href="/solutions/transport-management.html">Transport Management System</a>
+      <a href="/solutions/warehouse-management.html">Warehouse Management System</a>
+    </div>
+  </div>
+
+  <a href="/portfolio/index.html" class="m-link">Portfolio</a>
+  <a href="/technologies.html" class="m-link">Technologies</a>
+  <a href="/case-study/index.html" class="m-link">Case Study</a>
+  <a href="/contact.html" class="m-link">Contact Us</a>
+
+</div>
+
+
+<div class="breadcrumb-box">
+    <h2 class="page-title">Technologies <span></span></h2>
+
+    <div class="breadcrumb">
+        <a href="/index.html">Home</a> / <span>Technologies</span>
+    </div>
+</div>
+<!-- Technologies Section -->
+
+<section class="tech-groups">
+
+ <!-- Programming Languages & Frameworks -->
+<div class="tech-category">
+  <h2>Programming & Frameworks</h2>
+  <div class="tech-cards">
+    <div class="tech-card"><img src="/assets/images/JAVA.png" alt="Java"><h3>Java</h3></div>
+    <div class="tech-card"><img src="/assets/images/Python.png" alt="Python"><h3>Python</h3></div>
+    <div class="tech-card"><img src="/assets/images/PHP.png" alt="PHP"><h3>PHP</h3></div>
+    <div class="tech-card"><img src="/assets/images/NETcore.png" alt=".NET Core"><h3>.NET Core</h3></div>
+    <div class="tech-card"><img src="/assets/images/React.png" alt="React"><h3>React</h3></div>
+    <div class="tech-card"><img src="/assets/images/Angular.png" alt="Angular"><h3>Angular</h3></div>
+    <div class="tech-card"><img src="/assets/images/node.png" alt="Node.js"><h3>Node.js</h3></div>
+    <div class="tech-card"><img src="/assets/images/Flutter.png" alt="Flutter"><h3>Flutter</h3></div>
+    <div class="tech-card"><img src="/assets/images/ReactNative.png" alt="React Native"><h3>React Native</h3></div>
+    <div class="tech-card"><img src="/assets/images/wordpress.png" alt="WordPress"><h3>WordPress</h3></div>
+    <div class="tech-card"><img src="/assets/images/Swift.png" alt="Swift"><h3>Swift</h3></div>
+    <div class="tech-card"><img src="/assets/images/Kotlin.png" alt="Kotlin"><h3>Kotlin</h3></div>
+    <div class="tech-card"><img src="/assets/images/iOS.png" alt="iOS Development"><h3>iOS</h3></div>
+    <div class="tech-card"><img src="/assets/images/Android.png" alt="Android Development"><h3>Android</h3></div>
+  </div>
+</div>
+
+
+  <!-- AI, ML & Data -->
+  <div class="tech-category">
+    <h2>AI, ML & Data</h2>
+    <div class="tech-cards">
+      <div class="tech-card"><img src="/assets/images/AI.png" alt="AI"><h3>AI</h3></div>
+      <div class="tech-card"><img src="/assets/images/MachineLearning.png" alt="Machine Learning"><h3>Machine Learning</h3></div>
+      <div class="tech-card"><img src="/assets/images/Power BI.png" alt="Power BI"><h3>Power BI</h3></div>
+    </div>
+  </div>
+
+  <!-- Cloud & DevOps -->
+  <div class="tech-category">
+    <h2>Cloud & DevOps</h2>
+    <div class="tech-cards">
+      <div class="tech-card"><img src="/assets/images/aws.png" alt="AWS"><h3>AWS</h3></div>
+      <div class="tech-card"><img src="/assets/images/Azure.png" alt="Azure"><h3>Azure</h3></div>
+      <div class="tech-card"><img src="/assets/images/DevOps.png" alt="DevOps"><h3>DevOps</h3></div>
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- WhatsApp Floating Chat -->
+<div id="wa-widget">
+  
+  <!-- Floating Button -->
+  <div id="wa-button" onclick="toggleWA()">
+    <img src="assets/images/whatsapp.png" alt="WhatsApp" />
+  </div>
+
+  <!-- Chat Box -->
+  <div id="wa-box">
+    <div class="wa-header">
+      <img src="assets/images/whatsapp-white.png" class="wa-icon">
+      <span>WhatsApp</span>
+      <button class="wa-close" onclick="toggleWA()">✕</button>
+    </div>
+<div class="wa-content">
+  <p><strong>Welcome to RutherCloud Solutions!</strong></p>
+
+  <p>
+    How can we assist you today? Whether you have questions, need
+    information about our services, or require technical support,
+    we're here to help.
+  </p>
+
+  <p>
+    For immediate assistance, feel free to reach out to us at
+    <br><strong>+91-6367757256</strong><br>
+    and <strong>Info@ruthercloud.com</strong>
+  </p>
+
+  <p>
+    Let's get started on making your experience with us exceptional.
+  </p>
+</div>
+
+    <a class="wa-btn" href="https://wa.me/916367757256" target="_blank">
+      Open chat ➤
+    </a>
+  </div>
+
+</div>
+
+<button id="scrollTopBtn">▲</button>
+  
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-section">
+      <div class="logo">
+        <a href="/index.html"><img src="assets/images/rutherlogo.png" alt="RutherCloud Logo"></a>
+      </div>
+      <p>
+        Udaipur, Rajasthan, India, 313001<br>
+        +91-6367757256<br>
+        <a>Info@ruthercloud.com</a>
+      </p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="/about.html">About Us</a></li>
+        <li><a href="/privacy.html">Privacy Policy</a></li>
+        <li><a href="/case-study/index.html">Case Study</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/ruthercloud?igsh=MWU0eGsxNzkxODIzbQ=="><img src="assets/images/instagram.png" alt="Instagram"></a>
+        <a href="https://x.com/RutherCloud?t=x-VeHMPO5INHrKK3ME0FWQ&s=08"><img src="assets/images/twitter-logo.png" alt="Twitter"></a>
+        <a href="https://www.linkedin.com/company/ruthercloud-solutions/"><img src="assets/images/linkedin.png" alt="LinkedIn"></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="copyright-box">
+      <p>© Copyright 2023-2026 Ruthercloud Solutions Pvt. Ltd. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+ 
+  <script src="/assets/js/script.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
