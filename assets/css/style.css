@@ -22,23 +22,22 @@ a:hover {
     transform: translateY(-2px);
 }
 
+
 .navbar {
-    position: fixed;
+    position: fixed;      /* 🔥 important */
     top: 0;
     left: 0;
     width: 100%;
+    z-index: 1000;        /* upar dikhne ke liye */
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #ffffff; /* White background */
-    padding: 8px 5px;
-    color: #000000; /* Black text */
-    border-radius: 15px;
-    backdrop-filter: blur(10px); /* Glassmorphism */
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1), 
-                -5px -5px 15px rgba(0, 196, 204, 0.05); /* Soft shadow */
-    transform: perspective(1000px) translateZ(0);
-}
+
+    background: #ffffff;
+    padding: 4px 8px;
+    color: #000000;
+
 
 .logo {
     font-size: 28px; /* Bold typography */
@@ -49,37 +48,36 @@ a:hover {
     color: transparent;
 }
 
-.navbar {
-    position: fixed;
-    top: 0;
+
+
+.nav-links > li > a {
+    position: relative;
+}
+
+/* underline only for normal links */
+.nav-links > li:not(.get-in-touch) > a::after {
+    content: "";
+    position: absolute;
     left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 3px;
+    background: #1e88ff;
+    border-radius: 10px;
+    transition: width 0.3s ease;
+}
+
+/* hover */
+.nav-links > li:not(.get-in-touch) > a:hover::after {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #ffffff; /* White background */
-    padding: 8px 5px;
-    color: #000000; /* Black text */
-    border-radius: 15px;
-    backdrop-filter: blur(10px); /* Glassmorphism */
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1), 
-                -5px -5px 15px rgba(0, 196, 204, 0.05); /* Soft shadow */
-    transform: perspective(1000px) translateZ(0);
 }
 
-.logo {
-    font-size: 28px; /* Bold typography */
-    font-weight: 700;
-    background: linear-gradient(45deg, Black); /* RutherCloud gradient */
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+/* active */
+.nav-links > li:not(.get-in-touch) > a.active::after {
+    width: 100%;
 }
 
-.navbar, .nav-menu {
-  position: relative;
-  z-index: 100; /* nav aur menu sabse upar */
-}
+
 
 .nav-links {
   display: flex;
@@ -399,7 +397,7 @@ a:hover {
 }
 
 .mega-menu {
-  top: 90%;
+  top: 100%;
 }
 
 /* FIX: Remove gap between Services link and mega menu */
@@ -2655,6 +2653,7 @@ ol li {
   color: #fff;              /* ✅ arrow white */
   margin-left: 6px;
 }
+
 
 
 
