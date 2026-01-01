@@ -3,7 +3,7 @@
 
   <!-- Home -->
   <url>
-    <loc>https://ruthercloud.netlify.app/</loc>
+    <loc>https://www.ruthercloud.com/</loc>
     <lastmod>2025-12-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -11,49 +11,49 @@
 
   <!-- Core Pages -->
   <url>
-    <loc>https://ruthercloud.netlify.app/about.html</loc>
+    <loc>https://www.ruthercloud.com/about.html</loc>
     <lastmod>2025-12-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://ruthercloud.netlify.app/services/</loc>
+    <loc>https://www.ruthercloud.com/services/</loc>
     <lastmod>2025-12-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://ruthercloud.netlify.app/solutions/</loc>
+    <loc>https://www.ruthercloud.com/solutions/</loc>
     <lastmod>2025-12-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://ruthercloud.netlify.app/portfolio/</loc>
+    <loc>https://www.ruthercloud.com/portfolio/</loc>
     <lastmod>2025-12-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://ruthercloud.netlify.app/technologies.html</loc>
+    <loc>https://www.ruthercloud.com/technologies.html</loc>
     <lastmod>2025-12-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://ruthercloud.netlify.app/contact.html</loc>
+    <loc>https://www.ruthercloud.com/contact.html</loc>
     <lastmod>2025-12-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://ruthercloud.netlify.app/privacy.html</loc>
+    <loc>https://www.ruthercloud.com/privacy.html</loc>
     <lastmod>2025-12-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
@@ -61,40 +61,38 @@
 
   <!-- Service Detail Pages -->
   <url>
-    <loc>https://ruthercloud.netlify.app/custom-software.html</loc>
+    <loc>https://www.ruthercloud.com/custom-software.html</loc>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://ruthercloud.netlify.app/mobile-app.html</loc>
+    <loc>https://www.ruthercloud.com/mobile-app.html</loc>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://ruthercloud.netlify.app/ai-ml-services.html</loc>
+    <loc>https://www.ruthercloud.com/ai-ml-services.html</loc>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://ruthercloud.netlify.app/ai-automation.html</loc>
+    <loc>https://www.ruthercloud.com/ai-automation.html</loc>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://ruthercloud.netlify.app/cloud-migration.html</loc>
+    <loc>https://www.ruthercloud.com/cloud-migration.html</loc>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://ruthercloud.netlify.app/data-analytics.html</loc>
+    <loc>https://www.ruthercloud.com/data-analytics.html</loc>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://ruthercloud.netlify.app/business-intelligence.html</loc>
+    <loc>https://www.ruthercloud.com/business-intelligence.html</loc>
     <priority>0.8</priority>
   </url>
-
 
 </urlset>
-
