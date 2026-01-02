@@ -1061,11 +1061,12 @@ a:hover {
 /* Each Project Card */
 .project {
   background: #fff;
-  border-radius: 14px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 
 .project:hover {
   transform: translateY(-8px);
@@ -1075,17 +1076,17 @@ a:hover {
 
 .project img {
   width: 100%;
-  height: 400px;              
-  max-height: 400px;        
-  object-fit: cover;       
+  height: 360px;
+  object-fit: contain;
   display: block;
-  background: #f4f4f4;       
-  transition: transform 0.3s ease;
-}
-
-.project:hover img {
+  padding: 5px;            /* minimal */
+  background: #f7f9fc;
   transform: scale(1.02);  
 }
+
+
+
+
 
 /* Project Title */
 .project h2 {
@@ -2788,6 +2789,7 @@ ol li {
   color: #fff;              /* ✅ arrow white */
   margin-left: 6px;
 }
+
 
 
 
