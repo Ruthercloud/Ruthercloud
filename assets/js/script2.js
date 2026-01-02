@@ -202,4 +202,67 @@ scrollBtn.addEventListener("click", () => {
 });
 
 
+<script>
+  const track = document.querySelector(".feedback-track");
+  let cards = document.querySelectorAll(".feedback-card");
+
+  const gap = 25;
+  let index = 1;
+  let interval;
+
+  /* ===== SLIDE TIME CONTROL ===== */
+  const SLIDE_DELAY = 6000; // 6 seconds
+
+  /* ===== CLONE FIRST & LAST ===== */
+  const firstClone = cards[0].cloneNode(true);
+  const lastClone = cards[cards.length - 1].cloneNode(true);
+
+  firstClone.classList.add("clone");
+  lastClone.classList.add("clone");
+
+  track.appendChild(firstClone);
+  track.insertBefore(lastClone, cards[0]);
+
+  cards = document.querySelectorAll(".feedback-card");
+
+  const cardWidth = cards[0].offsetWidth + gap;
+  track.style.transform = `translateX(${-cardWidth * index}px)`;
+
+  function setActive() {
+    cards.forEach(c => c.classList.remove("active"));
+    if (!cards[index].classList.contains("clone")) {
+      cards[index].classList.add("active");
+    }
+  }
+
+  function moveTo(i) {
+    track.style.transition = "transform 0.4s ease";
+    index = i;
+    track.style.transform = `translateX(${-cardWidth * index}px)`;
+    setActive();
+  }
+
+  track.addEventListener("transitionend", () => {
+    if (cards[index].classList.contains("clone")) {
+      track.style.transition = "none";
+
+      if (index === 0) {
+        index = cards.length - 2;
+      } else if (index === cards.length - 1) {
+        index = 1;
+      }
+
+      track.style.transform = `translateX(${-cardWidth * index}px)`;
+    }
+  });
+
+  /* ===== AUTO PLAY (ALWAYS RUNNING) ===== */
+  interval = setInterval(() => {
+    moveTo(index + 1);
+  }, SLIDE_DELAY);
+
+  setActive();
+</script>
+
+
 
