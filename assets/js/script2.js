@@ -202,7 +202,7 @@ scrollBtn.addEventListener("click", () => {
 });
 
 
-<script>
+
   const track = document.querySelector(".feedback-track");
   let cards = document.querySelectorAll(".feedback-card");
 
@@ -262,7 +262,8 @@ scrollBtn.addEventListener("click", () => {
   }, SLIDE_DELAY);
 
   setActive();
-</script>
+
+
 
 
 
