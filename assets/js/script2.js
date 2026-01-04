@@ -203,65 +203,98 @@ scrollBtn.addEventListener("click", () => {
 
 
 
-  const track = document.querySelector(".feedback-track");
-  let cards = document.querySelectorAll(".feedback-card");
+ const track = document.querySelector(".feedback-track");
+let cards = document.querySelectorAll(".feedback-card");
+const dotsContainer = document.querySelector(".feedback-dots");
 
-  const gap = 25;
-  let index = 1;
-  let interval;
+const gap = 25;
+let index = 1;
 
-  /* ===== SLIDE TIME CONTROL ===== */
-  const SLIDE_DELAY = 6000; // 6 seconds
+/* ===== CLONE ===== */
+const firstClone = cards[0].cloneNode(true);
+const lastClone = cards[cards.length - 1].cloneNode(true);
 
-  /* ===== CLONE FIRST & LAST ===== */
-  const firstClone = cards[0].cloneNode(true);
-  const lastClone = cards[cards.length - 1].cloneNode(true);
+track.appendChild(firstClone);
+track.insertBefore(lastClone, cards[0]);
 
-  firstClone.classList.add("clone");
-  lastClone.classList.add("clone");
+cards = document.querySelectorAll(".feedback-card");
 
-  track.appendChild(firstClone);
-  track.insertBefore(lastClone, cards[0]);
+const cardWidth = cards[0].offsetWidth + gap;
+track.style.transform = `translateX(${-cardWidth * index}px)`;
 
-  cards = document.querySelectorAll(".feedback-card");
+/* ===== DOTS ===== */
+const realCards = cards.length - 2;
 
-  const cardWidth = cards[0].offsetWidth + gap;
+for (let i = 0; i < realCards; i++) {
+  const dot = document.createElement("span");
+  dot.addEventListener("click", () => moveTo(i + 1));
+  dotsContainer.appendChild(dot);
+}
+
+function setActive() {
+  dotsContainer.querySelectorAll("span").forEach(d => d.classList.remove("active"));
+  let dotIndex = index - 1;
+  if (dotIndex < 0) dotIndex = realCards - 1;
+  if (dotIndex >= realCards) dotIndex = 0;
+  dotsContainer.children[dotIndex]?.classList.add("active");
+}
+
+/* ===== MOVE ===== */
+function moveTo(i) {
+  track.style.transition = "transform 0.4s ease";
+  index = i;
   track.style.transform = `translateX(${-cardWidth * index}px)`;
-
-  function setActive() {
-    cards.forEach(c => c.classList.remove("active"));
-    if (!cards[index].classList.contains("clone")) {
-      cards[index].classList.add("active");
-    }
-  }
-
-  function moveTo(i) {
-    track.style.transition = "transform 0.4s ease";
-    index = i;
-    track.style.transform = `translateX(${-cardWidth * index}px)`;
-    setActive();
-  }
-
-  track.addEventListener("transitionend", () => {
-    if (cards[index].classList.contains("clone")) {
-      track.style.transition = "none";
-
-      if (index === 0) {
-        index = cards.length - 2;
-      } else if (index === cards.length - 1) {
-        index = 1;
-      }
-
-      track.style.transform = `translateX(${-cardWidth * index}px)`;
-    }
-  });
-
-  /* ===== AUTO PLAY (ALWAYS RUNNING) ===== */
-  interval = setInterval(() => {
-    moveTo(index + 1);
-  }, SLIDE_DELAY);
-
   setActive();
+}
+
+/* ===== INFINITE LOOP FIX ===== */
+track.addEventListener("transitionend", () => {
+  if (cards[index] === firstClone) index = 1;
+  if (cards[index] === lastClone) index = cards.length - 2;
+
+  track.style.transition = "none";
+  track.style.transform = `translateX(${-cardWidth * index}px)`;
+});
+
+/* ===== DRAG / SWIPE ===== */
+let startX = 0;
+let isDragging = false;
+
+track.addEventListener("mousedown", e => {
+  startX = e.pageX;
+  isDragging = true;
+  track.classList.add("dragging");
+});
+
+track.addEventListener("mouseup", e => {
+  if (!isDragging) return;
+  const diff = e.pageX - startX;
+  if (diff > 50) moveTo(index - 1);
+  if (diff < -50) moveTo(index + 1);
+  isDragging = false;
+  track.classList.remove("dragging");
+});
+
+track.addEventListener("mouseleave", () => isDragging = false);
+
+/* TOUCH (MOBILE) */
+track.addEventListener("touchstart", e => {
+  startX = e.touches[0].clientX;
+});
+
+track.addEventListener("touchend", e => {
+  const diff = e.changedTouches[0].clientX - startX;
+  if (diff > 50) moveTo(index - 1);
+  if (diff < -50) moveTo(index + 1);
+});
+
+setActive();
+
+
+
+
+
+
 
 
 
