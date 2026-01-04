@@ -949,8 +949,8 @@ a:hover {
   }
 
   .founder img {
-    width: 120px;
-    height: 120px;
+    width: 200px;
+    height: 200px;
   }
 }
 
@@ -2806,6 +2806,7 @@ ol li {
   color: #fff;              /* ✅ arrow white */
   margin-left: 6px;
 }
+
 
 
 
