@@ -2809,6 +2809,36 @@ ol li {
 
 
 
+.goodfirms-wrapper {
+  margin-top: 9px;
+}
+
+.goodfirms-label {
+  display: block;
+  font-size: 12px;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.goodfirms-badge {
+  max-width: 70px;   /* chhota size */
+  height: auto;
+  opacity: 0.9;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.goodfirms-badge:hover {
+  transform: scale(1.03);
+  opacity: 1;
+}
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+  .goodfirms-badge {
+    max-width: 70px;
+  }
+}
+
 
 
 
