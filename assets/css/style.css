@@ -1418,13 +1418,25 @@ a:hover {
 
 .social-icons {
   display: flex;
-  gap: 15px;
+  gap: 10px;
 }
 
-.social-icons img {
-  width: 30px;
-  height: 30px;
+.social-icons a {
+  width: 32px;
+  height: 32px;
+  background: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
 }
+
+.social-icons i {
+  font-size: 20px;
+  color: #000;
+}
+
 
 .footer-bottom {
   width: 100%; /* poori screen cover kare */
@@ -2844,6 +2856,7 @@ ol li {
     max-width: 70px !important;
   }
 }
+
 
 
 
