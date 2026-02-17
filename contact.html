@@ -181,30 +181,49 @@
     <h1>Get in Touch with Us</h1>
     <h3>Have a project in mind? Fill out the form below, and let’s start the conversation!</h3>
   </div>
+<!-- reCAPTCHA Script -->
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
-  <form
+<form
   action="https://formspree.io/f/mnnddnov"
   method="POST"
   class="contact-form"
+  id="contactForm"
 >
+
   <label for="name">Your name</label>
-  <input type="name" id="name" name="name" required>
+  <input type="text" id="name" name="name" required>
 
   <label for="email">Your email</label>
   <input type="email" id="email" name="email" required>
 
-  <label for="name">Phone</label>
-  <input type="Phone" id="Phone" name="Phone" required>
+  <label for="phone">Phone</label>
+  <input type="text" id="phone" name="phone" required>
 
-  <label for="name">Company name</label>
-  <input type="Company name" id="Company name" name="Company name" required>
+  <label for="company">Company name</label>
+  <input type="text" id="company" name="company" required>
 
-  <label for="Your Requirement">Your Requirement</label>
-  <textarea id="Your Requirement" name="Your Requirement" rows="5" required></textarea>
+  <label for="requirement">Your Requirement</label>
+  <textarea id="requirement" name="requirement" rows="5" required></textarea>
 
+  <!-- reCAPTCHA -->
+  <div class="g-recaptcha" data-sitekey="6LeUaG4sAAAAABInNqvbiGH_Uc5WLG-5j_AJVOE2"></div>
+
+  <br>
 
   <button type="submit" class="btn">Send</button>
+
 </form>
+
+
+<!-- ✅ Success Popup -->
+<!-- Success Popup -->
+<div id="successPopup" class="popup">
+  <div class="popup-content">
+    <h3>✅ Message Sent!</h3>
+    <p>Thank you for contacting RutherCloud.<br>We will contact you soon.</p>
+  </div>
+</div>
 
   <div class="contact-info-boxes">
     <div class="info-box">
@@ -336,6 +355,7 @@
 </body>
 
 </html>
+
 
 
 
