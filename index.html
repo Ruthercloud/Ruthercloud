@@ -564,20 +564,22 @@ From web and mobile applications to enterprise software, we help businesses tran
 <script>
 window.addEventListener("load", function(){
   window.cookieconsent.initialise({
+
     palette: {
       popup: {
         background: "#ffffff",
-        text: "#333"
+        text: "#333333"
       },
       button: {
         background: "#0066ff",
         text: "#ffffff"
       }
     },
+
     theme: "classic",
     position: "bottom-left",
 
-      content: {
+    content: {
       message: "RutherCloud uses cookies to enhance your browsing experience, analyze traffic, and improve our services. You can manage your preferences anytime.",
       dismiss: "Accept all",
       deny: "Accept necessary",
@@ -585,15 +587,20 @@ window.addEventListener("load", function(){
       href: "/privacy.html"
     },
 
-    type: "opt-in"
+    type: "opt-in",
+
+    revokable: false   // ✅ This removes the small Cookie Policy button
+
   });
 });
 </script>
+
 
   <script src="/assets/js/script2.js"></script>
 </body>
 
 </html>
+
 
 
 
