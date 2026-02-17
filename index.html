@@ -64,7 +64,7 @@
 <meta name="theme-color" content="#0a66c2">
 
 
-  <link rel="stylesheet" href="assets/css/style.css?v=2.1">
+  <link rel="stylesheet" href="assets/css/style.css?v=2.2">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
@@ -441,7 +441,57 @@ From web and mobile applications to enterprise software, we help businesses tran
 
 
 
+<section class="contact-section">
+  <div class="contact-content">
+    <h1>Get in Touch with Us</h1>
+    <h3>Have a project in mind? Fill out the form below, and let’s start the conversation!</h3>
+  </div>
 
+<!-- reCAPTCHA Script -->
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+<form
+  action="https://formspree.io/f/mnnddnov"
+  method="POST"
+  class="contact-form"
+  id="contactForm"
+>
+
+  <label for="name">Your name</label>
+  <input type="text" id="name" name="name" required>
+
+  <label for="email">Your email</label>
+  <input type="email" id="email" name="email" required>
+
+  <label for="phone">Phone</label>
+  <input type="text" id="phone" name="phone" required>
+
+  <label for="company">Company name</label>
+  <input type="text" id="company" name="company" required>
+
+  <label for="requirement">Your Requirement</label>
+  <textarea id="requirement" name="requirement" rows="5" required></textarea>
+
+  <!-- reCAPTCHA -->
+  <div class="g-recaptcha" data-sitekey="6LeUaG4sAAAAABInNqvbiGH_Uc5WLG-5j_AJVOE2"></div>
+
+  <br>
+
+  <button type="submit" class="btn">Send</button>
+
+</form>
+
+
+<!-- ✅ Success Popup -->
+<!-- Success Popup -->
+<div id="successPopup" class="popup">
+  <div class="popup-content">
+    <h3>✅ Message Sent!</h3>
+    <p>Thank you for contacting RutherCloud.<br>We will contact you soon.</p>
+  </div>
+</div>
+
+</section>
 
 
 <footer class="footer">
@@ -513,6 +563,7 @@ From web and mobile applications to enterprise software, we help businesses tran
 </body>
 
 </html>
+
 
 
 
