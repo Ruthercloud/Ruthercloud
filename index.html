@@ -589,17 +589,32 @@ window.addEventListener("load", function(){
 
     type: "opt-in",
 
-    revokable: false   // ✅ This removes the small Cookie Policy button
+    revokable: false,   // disable revoke button
+
+    onInitialise: function () {
+      var revoke = document.querySelector('.cc-revoke');
+      if(revoke) revoke.remove();
+    }
 
   });
 });
 </script>
 
 
+  <style>
+.cc-revoke {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+</style>
+
+
   <script src="/assets/js/script2.js"></script>
 </body>
 
 </html>
+
 
 
 
