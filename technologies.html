@@ -315,20 +315,22 @@
 <script>
 window.addEventListener("load", function(){
   window.cookieconsent.initialise({
+
     palette: {
       popup: {
         background: "#ffffff",
-        text: "#333"
+        text: "#333333"
       },
       button: {
         background: "#0066ff",
         text: "#ffffff"
       }
     },
+
     theme: "classic",
     position: "bottom-left",
 
-      content: {
+    content: {
       message: "RutherCloud uses cookies to enhance your browsing experience, analyze traffic, and improve our services. You can manage your preferences anytime.",
       dismiss: "Accept all",
       deny: "Accept necessary",
@@ -336,10 +338,26 @@ window.addEventListener("load", function(){
       href: "/privacy.html"
     },
 
-    type: "opt-in"
+    type: "opt-in",
+
+    revokable: false,   // disable revoke button
+
+    onInitialise: function () {
+      var revoke = document.querySelector('.cc-revoke');
+      if(revoke) revoke.remove();
+    }
+
   });
 });
 </script>
+
+<style>
+.cc-revoke {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+</style>
 
   
   
@@ -347,6 +365,7 @@ window.addEventListener("load", function(){
 </body>
 
 </html>
+
 
 
 
