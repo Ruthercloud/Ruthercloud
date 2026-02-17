@@ -66,6 +66,10 @@
 
   <link rel="stylesheet" href="assets/css/style.css?v=2.2">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+   <!-- Cookie Consent CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+<!-- Cookie Consent JS -->
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
 </head>
 <body>
 
@@ -557,12 +561,40 @@ From web and mobile applications to enterprise software, we help businesses tran
 </footer>
  
 
+<script>
+window.addEventListener("load", function(){
+  window.cookieconsent.initialise({
+    palette: {
+      popup: {
+        background: "#ffffff",
+        text: "#333"
+      },
+      button: {
+        background: "#0066ff",
+        text: "#ffffff"
+      }
+    },
+    theme: "classic",
+    position: "bottom-left",
 
+      content: {
+      message: "RutherCloud uses cookies to enhance your browsing experience, analyze traffic, and improve our services. You can manage your preferences anytime.",
+      dismiss: "Accept all",
+      deny: "Accept necessary",
+      link: "Cookie Settings",
+      href: "/privacy.html"
+    },
+
+    type: "opt-in"
+  });
+});
+</script>
 
   <script src="/assets/js/script2.js"></script>
 </body>
 
 </html>
+
 
 
 
