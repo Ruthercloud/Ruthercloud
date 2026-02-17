@@ -293,3 +293,51 @@ scrollBtn.addEventListener("click", () => {
 
 
 
+
+
+
+// Contact form submission with AJAX and reCAPTCHA validation
+const form = document.getElementById("contactForm");
+
+form.addEventListener("submit", async function(e) {
+  e.preventDefault();
+
+  var captcha = grecaptcha.getResponse();
+
+  if(captcha.length === 0) {
+    alert("Please verify captcha first.");
+    return;
+  }
+
+  const data = new FormData(form);
+
+  const response = await fetch(form.action, {
+    method: form.method,
+    body: data,
+    headers: {
+      'Accept': 'application/json'
+    }
+  });
+
+  if(response.ok) {
+
+    // show popup
+    const popup = document.getElementById("successPopup");
+    popup.style.display = "flex";
+
+    // clear form
+    form.reset();
+    grecaptcha.reset();
+
+    // auto close after 3 sec
+    setTimeout(() => {
+      popup.style.display = "none";
+    }, 3000);
+
+  } else {
+    alert("Something went wrong. Please try again.");
+  }
+});
+
+
+
