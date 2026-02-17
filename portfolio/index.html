@@ -10,7 +10,11 @@
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <meta name="description" content="Explore RUTHERCLOUD portfolio featuring cloud infrastructure, DevOps automation, web development and scalable technology projects.">
+  <meta name="description" content="Explore RUTHERCLOUD portfolio featuring cloud infrastructure, DevOps automation, web development and scalable technology projects.">  
+    <!-- Cookie Consent CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+<!-- Cookie Consent JS -->
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
 </head>
 <body>
 
@@ -290,11 +294,60 @@
     </div>
   </div>
 </footer>
- 
+
+
+<script>
+window.addEventListener("load", function(){
+  window.cookieconsent.initialise({
+
+    palette: {
+      popup: {
+        background: "#ffffff",
+        text: "#333333"
+      },
+      button: {
+        background: "#0066ff",
+        text: "#ffffff"
+      }
+    },
+
+    theme: "classic",
+    position: "bottom-left",
+
+    content: {
+      message: "RutherCloud uses cookies to enhance your browsing experience, analyze traffic, and improve our services. You can manage your preferences anytime.",
+      dismiss: "Accept all",
+      deny: "Accept necessary",
+      link: "Cookie Settings",
+      href: "/privacy.html"
+    },
+
+    type: "opt-in",
+
+    revokable: false,   // disable revoke button
+
+    onInitialise: function () {
+      var revoke = document.querySelector('.cc-revoke');
+      if(revoke) revoke.remove();
+    }
+
+  });
+});
+</script>
+
+<style>
+.cc-revoke {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+</style>
+  
   <script src="/assets/js/script.js"></script>
 </body>
 
 </html>
+
 
 
 
