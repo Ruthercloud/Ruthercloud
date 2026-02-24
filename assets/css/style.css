@@ -1052,81 +1052,6 @@ a:hover {
 
 
 
-/* Portfolio Section */
-.portfolio-section {
-  max-width: 1200px;
-  margin: 70px auto;
-  padding: 20px;
-  font-family: 'Arial', sans-serif;
-  text-align: center;
-}
-
-/* Heading */
-.portfolio-section > h1 {
-  font-size: 2.4rem;
-  color: #1a1a1a;
-  margin-bottom: 40px;
-  font-weight: 700;
-}
-
-/* Projects Grid */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
-  text-align: left; /* title left aligned inside box */
-}
-
-/* Each Project Card */
-.project {
-  background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-
-.project:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 28px rgba(0, 120, 255, 0.2);
-}
-
-
-.project img {
-  width: 100%;
-  height: 360px;
-  object-fit: contain;
-  display: block;
-  padding: 5px;            /* minimal */
-  background: #f7f9fc;
-  transform: scale(1.02);  
-}
-
-
-
-
-
-/* Project Title */
-.project h2 {
-  font-size: 1.2rem;
-  color: #222;
-  margin: 15px;
-  text-align: center;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .portfolio-section > h1 {
-    font-size: 2rem;
-  }
-
-  .project h2 {
-    font-size: 1rem;
-  }
-}
-
-
 /* =========================
    Technologies Section
 ========================= */
@@ -3045,6 +2970,7 @@ ol li {
   transform: translateY(-4px);
   box-shadow: 0 10px 30px rgba(10,102,194,0.25);
 }
+
 
 
 
