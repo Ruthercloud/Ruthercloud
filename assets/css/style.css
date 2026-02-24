@@ -2984,62 +2984,7 @@ ol li {
 
 
 
-/* SCROLL REVEAL ANIMATIONS */
 
-/* Base Reveal */
-.reveal-left,
-.reveal-right {
-  opacity: 0;
-  transition: all 0.9s ease;
-}
-
-.reveal-left {
-  transform: translateX(-80px);
-}
-
-.reveal-right {
-  transform: translateX(80px);
-}
-
-.reveal-left.active,
-.reveal-right.active {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-/* Paragraph fade */
-.reveal-para {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 1s ease;
-}
-
-.reveal-para.active {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Image subtle floating */
-.agency-illus img {
-  max-width: 100%;
-  animation: floatAgency 5s ease-in-out infinite;
-}
-
-@keyframes floatAgency {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-12px); }
-  100% { transform: translateY(0px); }
-}
-
-/* Button lift hover */
-.lift-btn {
-  transition: all 0.3s ease;
-}
-
-.lift-btn:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 30px rgba(10,102,194,0.25);
-}
 
 
 
