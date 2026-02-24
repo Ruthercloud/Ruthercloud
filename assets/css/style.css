@@ -2911,6 +2911,140 @@ ol li {
 
 
 
+/* SCROLL REVEAL ANIMATION */
+
+.reveal-card {
+  opacity: 0;
+  transform: translateY(60px) scale(0.95);
+  transition: all 0.8s cubic-bezier(.21,1.02,.73,1);
+}
+
+.reveal-card.active {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Slight delay effect for each card */
+.reveal-card:nth-child(1) { transition-delay: 0.1s; }
+.reveal-card:nth-child(2) { transition-delay: 0.2s; }
+.reveal-card:nth-child(3) { transition-delay: 0.3s; }
+.reveal-card:nth-child(4) { transition-delay: 0.4s; }
+
+
+
+
+
+
+
+
+
+
+
+/* Base hidden state */
+.reveal-left,
+.reveal-right {
+  opacity: 0;
+  transition: all 0.9s ease;
+}
+
+/* Left animation */
+.reveal-left {
+  transform: translateX(-80px);
+}
+
+/* Right animation */
+.reveal-right {
+  transform: translateX(80px);
+}
+
+/* When visible */
+.reveal-left.active,
+.reveal-right.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Stagger list animation */
+.stagger-list li {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.stagger-list li.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Button glow hover */
+.glow-btn {
+  transition: all 0.3s ease;
+}
+
+.glow-btn:hover {
+  box-shadow: 0 10px 30px rgba(10,102,194,0.3);
+  transform: translateY(-3px);
+}
+
+
+
+
+/* SCROLL REVEAL ANIMATIONS */
+
+/* Base Reveal */
+.reveal-left,
+.reveal-right {
+  opacity: 0;
+  transition: all 0.9s ease;
+}
+
+.reveal-left {
+  transform: translateX(-80px);
+}
+
+.reveal-right {
+  transform: translateX(80px);
+}
+
+.reveal-left.active,
+.reveal-right.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Paragraph fade */
+.reveal-para {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease;
+}
+
+.reveal-para.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Image subtle floating */
+.agency-illus img {
+  max-width: 100%;
+  animation: floatAgency 5s ease-in-out infinite;
+}
+
+@keyframes floatAgency {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Button lift hover */
+.lift-btn {
+  transition: all 0.3s ease;
+}
+
+.lift-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(10,102,194,0.25);
+}
 
 
 
