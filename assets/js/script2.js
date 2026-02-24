@@ -462,32 +462,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-document.addEventListener("DOMContentLoaded", function () {
-
-  const elements = document.querySelectorAll('.reveal-left, .reveal-right');
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-
-        entry.target.classList.add('active');
-
-        // paragraph animation
-        const para = entry.target.querySelector('.reveal-para');
-        if (para) {
-          setTimeout(() => {
-            para.classList.add('active');
-          }, 300);
-        }
-
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.3 });
-
-  elements.forEach(el => observer.observe(el));
-
-});
-
 
 
