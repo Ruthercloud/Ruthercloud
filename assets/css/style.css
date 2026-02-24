@@ -1047,6 +1047,76 @@ a:hover {
 
 
 
+/* =========================
+   Portfolio Section (Service Style)
+========================= */
+
+.portfolio-section {
+  max-width: 1200px;
+  margin: 70px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+/* Card */
+.portfolio-card {
+  background: #f3f4f6; /* same as services */
+  border-radius: 20px;
+  padding: 30px 25px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+/* Image */
+.portfolio-image {
+  height: 180px;   /* smaller like services */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.portfolio-image img {
+  max-width: 100%;
+  max-height: 160px;
+  object-fit: contain;
+}
+
+/* Title */
+.portfolio-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #0a4ea3;  /* services blue */
+  margin-bottom: 20px;
+}
+
+/* Button */
+.portfolio-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background: #144ea8;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.portfolio-btn:hover {
+  background: #0d3f8f;
+}
 
 
 
@@ -2970,6 +3040,7 @@ ol li {
   transform: translateY(-4px);
   box-shadow: 0 10px 30px rgba(10,102,194,0.25);
 }
+
 
 
 
