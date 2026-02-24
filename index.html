@@ -213,7 +213,9 @@
   <div class="agency-hero-wrap">
 
     <div class="agency-hero-text">
-      <h1>RutherCloud - Builds Solutions for Your Business</h1>
+ <h1>
+      <span id="typing-text"></span>
+    </h1>
 
       <p>
      We turn modern technologies into powerful digital products that help businesses grow faster.
@@ -223,42 +225,79 @@
       <a href="/contact.html" class="agency-btn">Get Started</a>
     </div>
 
-    <div class="agency-hero-illus">
-      <img src="assets/images/hero-illustration.png" alt="Business Illustration">
-    </div>
+   <div class="agency-hero-illus">
+    <img src="assets/images/hero-illustration.png" alt="Business Illustration">
+  </div>
 
   </div>
 </section>
 
 
+
+<style>
+#typing-text {
+  display: inline-block;
+  max-width: 700px;   /* adjust as needed */
+  white-space: normal;  /* allow wrapping */
+  word-break: break-word;
+}
+
+.agency-hero-illus {
+  opacity: 0;
+  transform: translateX(80px);
+  animation: slideInRight 1s ease forwards;
+}
+
+@keyframes slideInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.cursor {
+  display: inline-block;
+  margin-left: 5px;
+  animation: blink 1s infinite;
+  color: #0a66c2; /* RutherCloud theme color */
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}</style>
+
+
+
   
 
 
-<section class="agency-services">
+<section class="agency-services reveal-section">
   <h2>We Provide The Best <span>Services</span></h2>
 
   <div class="agency-service-grid">
 
     <!-- Software -->
-    <a href="services/custom-software.html" class="agency-card yellow clickable-card">
+    <a href="services/custom-software.html" class="agency-card yellow clickable-card reveal-card">
       <img src="assets/images/Custom-software-development.png" alt="Software Development" class="service-img">
       <h3>Software Development Services</h3>
     </a>
 
     <!-- Mobile -->
-    <a href="services/mobile-app.html" class="agency-card green clickable-card">
+    <a href="services/mobile-app.html" class="agency-card green clickable-card reveal-card">
       <img src="assets/images/Mobile-Application-Development.png" alt="Mobile Application" class="service-img">
       <h3>Mobile App Development Services</h3>
     </a>
 
     <!-- Consulting -->
-    <a href="services/technology-consulting.html" class="agency-card purple clickable-card">
+    <a href="services/technology-consulting.html" class="agency-card purple clickable-card reveal-card">
       <img src="assets/images/Technology-Consulting.png" alt="Technology Consulting" class="service-img">
       <h3>Technology Consulting Services</h3>
     </a>
 
     <!-- Website -->
-    <a href="services/website-development.html" class="agency-card orange clickable-card">
+    <a href="services/website-development.html" class="agency-card blue clickable-card reveal-card">
       <img src="assets/images/Website-Development.png" alt="Website Development" class="service-img">
       <h3>Website Development Services</h3>
     </a>
@@ -280,18 +319,19 @@
 
 
 
+
 <section class="simple-solutions">
   <div class="simple-wrap">
 
-    <div class="simple-illus">
+    <div class="simple-illus reveal-left">
       <img src="assets/images/simple-illustration.png" alt="Solutions">
     </div>
 
-    <div class="simple-text">
+    <div class="simple-text reveal-right">
       <h2><span>Solutions!</span></h2>
       <p>We provide powerful solutions that accelerate your business success.</p>
 
-      <ul>
+      <ul class="stagger-list">
         <li><span>1</span> Teleshopping and Omnichannel CRM </li>
         <li><span>2</span> E-commerce </li>
         <li><span>3</span> Warehouse Management System </li>
@@ -299,7 +339,9 @@
       </ul>
 
       <div class="simple-btns">
-        <a href="solutions/index.html" class="agency-btn-outline">View All Solutions →</a>
+        <a href="solutions/index.html" class="agency-btn-outline glow-btn">
+          View All Solutions →
+        </a>
       </div>
     </div>
 
@@ -314,18 +356,19 @@
 <section class="our-agency">
   <div class="agency-wrap">
 
-    <div class="agency-text">
-      <h2>Our <span>Agency</span></h2>
-      <p>
+    <div class="agency-text reveal-left">
+      <h2 class="reveal-title">Our <span>Agency</span></h2>
+
+      <p class="reveal-para">
        RutherCloud is one of the top software development companies in India and beyond, renowned for its expertise and excellence. We combine onshore and offshore development strategies to provide seamless communication, round-the-clock availability, and minimize errors. Our team specializes in delivering custom software solutions tailored to each client’s unique needs, ensuring top-quality results and maximum efficiency.
 
 From web and mobile applications to enterprise software, we help businesses transform ideas into powerful, scalable, and future-ready solutions.
-
       </p>
-      <a href="/about.html" class="agency-btn">Read More</a>
+
+      <a href="/about.html" class="agency-btn lift-btn">Read More</a>
     </div>
 
-    <div class="agency-illus">
+    <div class="agency-illus reveal-right">
       <img src="assets/images/agency-illustration.png" alt="Agency Work">
     </div>
 
@@ -616,6 +659,7 @@ window.addEventListener("load", function(){
 </body>
 
 </html>
+
 
 
 
