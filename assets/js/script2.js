@@ -342,6 +342,152 @@ form.addEventListener("submit", async function(e) {
 
 
 
+/* =========================
+   SCROLL REVEAL (SERVICES)
+========================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const cards = document.querySelectorAll('.reveal-card');
+
+  if (cards.length > 0) {
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          revealObserver.unobserve(entry.target); // run once
+        }
+      });
+    }, {
+      threshold: 0.2
+    });
+
+    cards.forEach(card => {
+      revealObserver.observe(card);
+    });
+  }
+
+});
+
+
+/* =========================
+   HERO TYPING ANIMATION
+========================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const typingElement = document.getElementById("typing-text");
+
+  if (!typingElement) return; // stop if element not found
+
+  const texts = [
+    "RutherCloud - Builds Solutions for Your Business",
+    "AI Powered Software Development",
+    "Cloud & IT Outsourcing Experts",
+    "We Turn Ideas Into Digital Products"
+  ];
+
+  let count = 0;
+  let index = 0;
+  let currentText = "";
+  let letter = "";
+
+  function type() {
+
+    if (count === texts.length) {
+      count = 0;
+    }
+
+    currentText = texts[count];
+    letter = currentText.slice(0, ++index);
+
+    typingElement.textContent = letter;
+
+    if (letter.length === currentText.length) {
+      setTimeout(erase, 1500);
+    } else {
+      setTimeout(type, 60);
+    }
+  }
+
+  function erase() {
+
+    letter = currentText.slice(0, --index);
+    typingElement.textContent = letter;
+
+    if (letter.length === 0) {
+      count++;
+      setTimeout(type, 300);
+    } else {
+      setTimeout(erase, 40);
+    }
+  }
+
+  type();
+
+});
+
+
+
+// SCROLL REVEAL (ABOUT & CONTACT)
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const elements = document.querySelectorAll('.reveal-left, .reveal-right');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+
+        entry.target.classList.add('active');
+
+        // Stagger list animation
+        if (entry.target.classList.contains('reveal-right')) {
+          const listItems = entry.target.querySelectorAll('.stagger-list li');
+          listItems.forEach((item, index) => {
+            setTimeout(() => {
+              item.classList.add('active');
+            }, index * 150);
+          });
+        }
+
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  elements.forEach(el => observer.observe(el));
+
+});
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const elements = document.querySelectorAll('.reveal-left, .reveal-right');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+
+        entry.target.classList.add('active');
+
+        // paragraph animation
+        const para = entry.target.querySelector('.reveal-para');
+        if (para) {
+          setTimeout(() => {
+            para.classList.add('active');
+          }, 300);
+        }
+
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  elements.forEach(el => observer.observe(el));
+
+});
 
 
 
