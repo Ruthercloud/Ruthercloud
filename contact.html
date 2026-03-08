@@ -183,71 +183,85 @@
 </div>
 
 
+
+
 <section class="contact-section">
-  <div class="contact-content">
-    <h1>Get in Touch with Us</h1>
-    <h3>Have a project in mind? Fill out the form below, and let’s start the conversation!</h3>
-  </div>
+
+<div class="contact-content">
+<h1>Get in Touch with Us</h1>
+<h3>Have a project in mind? Fill out the form below and let’s start the conversation.</h3>
+</div>
+
 <!-- reCAPTCHA Script -->
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
-<form
-  action="https://formspree.io/f/xnjgngna"
-  method="POST"
-  class="contact-form"
-  id="contactForm"
->
+<form action="https://formspree.io/f/xnjgngna" method="POST" class="contact-form">
 
-  <label for="name">Your name</label>
-  <input type="text" id="name" name="name" required>
+<div class="form-grid">
 
-  <label for="email">Your email</label>
-  <input type="email" id="email" name="email" required>
+<div class="form-group">
+<label for="name">Your Name</label>
+<input type="text" id="name" name="name" required>
+</div>
 
-  <label for="phone">Phone</label>
-  <input type="text" id="phone" name="phone" required>
+<div class="form-group">
+<label for="email">Your Email</label>
+<input type="email" id="email" name="email" required>
+</div>
 
-  <label for="company">Company name</label>
-  <input type="text" id="company" name="company" required>
+<div class="form-group">
+<label for="phone">Phone</label>
+<input type="text" id="phone" name="phone" required>
+</div>
 
-  <label for="requirement">Your Requirement</label>
-  <textarea id="requirement" name="requirement" rows="5" required></textarea>
+<div class="form-group">
+<label for="company">Company Name</label>
+<input type="text" id="company" name="company">
+</div>
 
-  <!-- reCAPTCHA -->
-  <div class="g-recaptcha" data-sitekey="6LeUaG4sAAAAABInNqvbiGH_Uc5WLG-5j_AJVOE2"></div>
+</div>
 
-  <br>
+<div class="form-group">
+<label for="requirement">Your Requirement</label>
+<textarea id="requirement" name="requirement" rows="5" required></textarea>
+</div>
 
-  <button type="submit" class="btn">Send</button>
+<div class="captcha-box">
+<div class="g-recaptcha" data-sitekey="6LeUaG4sAAAAABInNqvbiGH_Uc5WLG-5j_AJVOE2"></div>
+</div>
+
+<button type="submit" class="btn">Send</button>
 
 </form>
 
 
-<!-- ✅ Success Popup -->
 <!-- Success Popup -->
 <div id="successPopup" class="popup">
-  <div class="popup-content">
-    <h3>✅ Message Sent!</h3>
-    <p>Thank you for contacting RutherCloud.<br>We will contact you soon.</p>
-  </div>
+<div class="popup-content">
+<h3>✅ Message Sent!</h3>
+<p>Thank you for contacting RutherCloud.<br>We will contact you soon.</p>
+</div>
 </div>
 
-  <div class="contact-info-boxes">
-    <div class="info-box">
-      <img src="assets/images/pin.png" alt="Corporate Office" class="info-icon">
-      <h2>Corporate Office</h2>
-      <p>Udaipur, Rajasthan, India, 313001</p>
-    </div>
 
-    <div class="info-box">
-      <img src="assets/images/mail.png" alt="Connect with us" class="info-icon">
-      <h2>Connect with us</h2>
-      <p>Email: <a>Info@ruthercloud.com</a><br>
-         Phone: +91-6367757256</p>
-    </div>
-  <!-- New Info Boxes End -->
+<div class="contact-info-boxes">
+
+<div class="info-box">
+<img src="assets/images/pin.png" class="info-icon">
+<h2>Corporate Office</h2>
+<p>Udaipur, Rajasthan, India – 313001</p>
+</div>
+
+<div class="info-box">
+<img src="assets/images/mail.png" class="info-icon">
+<h2>Connect with us</h2>
+<p>Email: <a href="mailto:info@ruthercloud.com">info@ruthercloud.com</a><br>
+Phone: +91 6367757256</p>
+</div>
+
+</div>
+
 </section>
-
 
 
 
@@ -394,6 +408,7 @@ window.addEventListener("load", function(){
 </body>
 
 </html>
+
 
 
 
