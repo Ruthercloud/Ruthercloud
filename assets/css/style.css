@@ -2485,11 +2485,13 @@ ol li {
   cursor: pointer;
   z-index: 9999;
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  transition: 0.3s;
+  overflow:hidden;
 }
 
 #wa-button img {
-  width: 35px;
+  width: 35px !important;
+  height: 35px !important;
+  object-fit: contain;
 }
 
 /* Chat Box */
@@ -3003,6 +3005,7 @@ ol li {
   box-shadow: 0 10px 30px rgba(10,102,194,0.3);
   transform: translateY(-3px);
 }
+
 
 
 
