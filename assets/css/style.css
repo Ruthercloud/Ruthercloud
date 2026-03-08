@@ -481,6 +481,7 @@ a:hover {
 .agency-hero {
   background: #fff;
   padding: 70px 20px; /* 70px se kam kar diya */
+margin-top:60px;
 }
 
 .agency-hero-wrap,
@@ -492,6 +493,19 @@ a:hover {
   grid-template-columns: 1fr 1fr;
   align-items: center;
  gap: 20px;
+}
+
+/* HERO / SECTION IMAGES FIX */
+
+.agency-hero-illus img,
+.simple-illus img,
+.agency-illus img {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  display: block;
+  margin: auto;
+  object-fit: contain;
 }
 
 .agency-hero-text h1 span,
@@ -3005,6 +3019,7 @@ ol li {
   box-shadow: 0 10px 30px rgba(10,102,194,0.3);
   transform: translateY(-3px);
 }
+
 
 
 
