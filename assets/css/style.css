@@ -1554,7 +1554,7 @@ grid-template-columns:1fr;
 padding:25px;
 }
 
-
+}
 /* Contact Info Boxes */
 .contact-info-boxes {
   display: flex;
@@ -3019,6 +3019,7 @@ ol li {
   box-shadow: 0 10px 30px rgba(10,102,194,0.3);
   transform: translateY(-3px);
 }
+
 
 
 
