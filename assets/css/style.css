@@ -480,7 +480,6 @@ a:hover {
 
 .agency-hero {
   background: #fff;
-  padding: 70px 20px; /* 70px se kam kar diya */
 margin-top:60px;
 }
 
@@ -494,6 +493,8 @@ margin-top:60px;
   align-items: center;
  gap: 20px;
 }
+
+
 
 /* HERO / SECTION IMAGES FIX */
 
@@ -1288,42 +1289,6 @@ margin-top:60px;
 }
 
 
-
-
-.key-highlights, .stats {
-    background: #1E90FF; /* Blue for stats section */
-    color: #FFFFFF;
-    text-align: center;
-    padding: 50px 20px;
-}
-
-.highlights-container, .stats {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
-}
-
-.highlight-item h3, .stat-item h3 {
-    font-size: 2rem;
-    margin-bottom: 5px;
-}
-
-.highlight-item p, .stat-item p {
-    font-size: 1rem;
-}
-
-@media (max-width: 768px) {
-    .highlight-item h3, .stat-item h3 {
-        font-size: 1.5rem;
-    }
-    .highlight-item p, .stat-item p {
-        font-size: 0.9rem;
-    }
-    .highlights-container, .stats {
-        gap: 20px;
-    }
-}
 
 
 
