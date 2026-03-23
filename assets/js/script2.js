@@ -42,52 +42,43 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
 
+
+// Counter animation when in view
 const counters = document.querySelectorAll(".counter");
-const speed = 400; 
 
-function runCounter(counter) {
-  const value = +counter.getAttribute("data-target");
-  const increment = value / speed;
+const observer = new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
 
-  const animate = () => {
-    const data = +counter.innerText;
+let el = entry.target;
+let target = +el.dataset.target;
+let count = 0;
 
-    if (data < value) {
-      counter.innerText = Math.ceil(data + increment);
-      setTimeout(animate, 10);
-    } else {
-      // Suffix logic
-      if ([50, 80, 100, 2].includes(value)) {
-        counter.innerText = value + "+";
-      } else if ([96, 85].includes(value)) {
-        counter.innerText = value + "%";
-      } else {
-        counter.innerText = value;
-      }
-    }
-  };
+let step = target/60;
 
-  counter.innerText = "0";
-  animate();
+let interval = setInterval(()=>{
+count += step;
+
+if(count >= target){
+clearInterval(interval);
+
+if(target >= 95) el.innerText = target + "%";
+else el.innerText = target + "+";
+
+}else{
+el.innerText = Math.floor(count);
 }
 
-// ▶ RUN ONLY WHEN VISIBLE (never multiple times)
-const options = { threshold: 0.4 };  // 40% section visible
+},20);
 
-const observer = new IntersectionObserver((entries, obs) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      runCounter(entry.target);
-      obs.unobserve(entry.target); // stop re-running
-    }
-  });
-}, options);
+observer.unobserve(el);
 
-// Observe each counter
-counters.forEach(counter => observer.observe(counter));
+}
+});
+},{threshold:.5});
 
-
-
+counters.forEach(c=>observer.observe(c));
+  
   
 
 
