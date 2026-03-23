@@ -41,8 +41,6 @@ window.addEventListener('DOMContentLoaded', () => {
   
 
 
-
-
 // Counter animation when in view
 const counters = document.querySelectorAll(".counter");
 
@@ -79,7 +77,6 @@ observer.unobserve(el);
 
 counters.forEach(c=>observer.observe(c));
   
-  
 
 
 
@@ -89,7 +86,7 @@ counters.forEach(c=>observer.observe(c));
 
 
 
-
+// Solution section tab logic
 
 function showSolution(index) {
   let menu = document.querySelectorAll(".solution-menu li");
@@ -132,7 +129,7 @@ document.querySelectorAll(".m-title").forEach(title => {
 });
 
 
-
+// Desktop Mega Menu Toggle
 function toggleMenu() {
   const nav = document.getElementById("nav-links");
   const button = document.querySelector(".hamburger");
@@ -180,108 +177,61 @@ function openMobileMenu() {
 }
 
 
+// Feedback carousel logic
+const track = document.querySelector(".feedback-track");
+const cards = document.querySelectorAll(".feedback-card");
+const prev = document.querySelector(".prev-btn");
+const next = document.querySelector(".next-btn");
+const dotsWrap = document.querySelector(".feedback-dots");
 
+let index = 0;
 
-const scrollBtn = document.getElementById("scrollTopBtn");
-
-window.addEventListener("scroll", () => {
-  scrollBtn.style.display = window.scrollY > 120 ? "block" : "none";
+/* dots */
+cards.forEach((_,i)=>{
+let d=document.createElement("span");
+d.onclick=()=>go(i);
+dotsWrap.appendChild(d);
 });
 
-scrollBtn.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-});
+function update(){
+track.style.transform=`translateX(-${index*100}%)`;
 
-
-
- const track = document.querySelector(".feedback-track");
-let cards = document.querySelectorAll(".feedback-card");
-const dotsContainer = document.querySelector(".feedback-dots");
-
-const gap = 25;
-let index = 1;
-
-/* ===== CLONE ===== */
-const firstClone = cards[0].cloneNode(true);
-const lastClone = cards[cards.length - 1].cloneNode(true);
-
-track.appendChild(firstClone);
-track.insertBefore(lastClone, cards[0]);
-
-cards = document.querySelectorAll(".feedback-card");
-
-const cardWidth = cards[0].offsetWidth + gap;
-track.style.transform = `translateX(${-cardWidth * index}px)`;
-
-/* ===== DOTS ===== */
-const realCards = cards.length - 2;
-
-for (let i = 0; i < realCards; i++) {
-  const dot = document.createElement("span");
-  dot.addEventListener("click", () => moveTo(i + 1));
-  dotsContainer.appendChild(dot);
+dotsWrap.querySelectorAll("span").forEach(d=>d.classList.remove("active"));
+dotsWrap.children[index].classList.add("active");
 }
 
-function setActive() {
-  dotsContainer.querySelectorAll("span").forEach(d => d.classList.remove("active"));
-  let dotIndex = index - 1;
-  if (dotIndex < 0) dotIndex = realCards - 1;
-  if (dotIndex >= realCards) dotIndex = 0;
-  dotsContainer.children[dotIndex]?.classList.add("active");
+function go(i){
+index=i;
+update();
 }
 
-/* ===== MOVE ===== */
-function moveTo(i) {
-  track.style.transition = "transform 0.4s ease";
-  index = i;
-  track.style.transform = `translateX(${-cardWidth * index}px)`;
-  setActive();
+next.onclick=()=>{
+index++;
+if(index>=cards.length) index=0;
+update();
 }
 
-/* ===== INFINITE LOOP FIX ===== */
-track.addEventListener("transitionend", () => {
-  if (cards[index] === firstClone) index = 1;
-  if (cards[index] === lastClone) index = cards.length - 2;
+prev.onclick=()=>{
+index--;
+if(index<0) index=cards.length-1;
+update();
+}
 
-  track.style.transition = "none";
-  track.style.transform = `translateX(${-cardWidth * index}px)`;
+/* swipe */
+
+let start=0;
+
+track.addEventListener("touchstart",e=>{
+start=e.touches[0].clientX;
 });
 
-/* ===== DRAG / SWIPE ===== */
-let startX = 0;
-let isDragging = false;
-
-track.addEventListener("mousedown", e => {
-  startX = e.pageX;
-  isDragging = true;
-  track.classList.add("dragging");
+track.addEventListener("touchend",e=>{
+let diff=e.changedTouches[0].clientX-start;
+if(diff>50) prev.onclick();
+if(diff<-50) next.onclick();
 });
 
-track.addEventListener("mouseup", e => {
-  if (!isDragging) return;
-  const diff = e.pageX - startX;
-  if (diff > 50) moveTo(index - 1);
-  if (diff < -50) moveTo(index + 1);
-  isDragging = false;
-  track.classList.remove("dragging");
-});
-
-track.addEventListener("mouseleave", () => isDragging = false);
-
-/* TOUCH (MOBILE) */
-track.addEventListener("touchstart", e => {
-  startX = e.touches[0].clientX;
-});
-
-track.addEventListener("touchend", e => {
-  const diff = e.changedTouches[0].clientX - startX;
-  if (diff > 50) moveTo(index - 1);
-  if (diff < -50) moveTo(index + 1);
-});
-
-setActive();
-
-
+update();
 
 
 
