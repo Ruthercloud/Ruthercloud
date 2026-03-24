@@ -239,7 +239,13 @@ a:hover {
 
 
 
-
+.m-label{
+display:block;
+padding:10px 0;
+color:#777;
+font-size:15px;
+cursor:default;
+}
 
 
 /* MOBILE MENU PANEL */
