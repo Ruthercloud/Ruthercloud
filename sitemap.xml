@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Main Pages -->
+  <url><loc>https://ruthercloud.com/</loc></url>
+  <url><loc>https://ruthercloud.com/about.html</loc></url>
+  <url><loc>https://ruthercloud.com/contact.html</loc></url>
+  <url><loc>https://ruthercloud.com/privacy.html</loc></url>
+
+  <!-- Services -->
+  <url><loc>https://ruthercloud.com/services/</loc></url>
+  <url><loc>https://ruthercloud.com/services/ai-agent.html</loc></url>
+  <url><loc>https://ruthercloud.com/services/ai-chatbot.html</loc></url>
+  <url><loc>https://ruthercloud.com/services/cicd-automation.html</loc></url>
+  <url><loc>https://ruthercloud.com/services/cloud-migration.html</loc></url>
+  <url><loc>https://ruthercloud.com/services/cloud-services.html</loc></url>
+  <url><loc>https://ruthercloud.com/services/crm-erp-development.html</loc></url>
+  <url><loc>https://ruthercloud.com/services/custom-software.html</loc></url>
+  <url><loc>https://ruthercloud.com/services/data-analytics.html</loc></url>
+  <url><loc>https://ruthercloud.com/services/devops-services.html</loc></url>
+  <url><loc>https://ruthercloud.com/services/mobile-app.html</loc></url>
+  <url><loc>https://ruthercloud.com/services/saas-applications.html</loc></url>
+  <url><loc>https://ruthercloud.com/services/website-development.html</loc></url>
+
+  <!-- Solutions -->
+  <url><loc>https://ruthercloud.com/solutions/</loc></url>
+  <url><loc>https://ruthercloud.com/solutions/accounting.html</loc></url>
+  <url><loc>https://ruthercloud.com/solutions/ai-support.html</loc></url>
+  <url><loc>https://ruthercloud.com/solutions/booking.html</loc></url>
+  <url><loc>https://ruthercloud.com/solutions/crm.html</loc></url>
+  <url><loc>https://ruthercloud.com/solutions/document-ai.html</loc></url>
+  <url><loc>https://ruthercloud.com/solutions/generative-ai.html</loc></url>
+  <url><loc>https://ruthercloud.com/solutions/hrms.html</loc></url>
+  <url><loc>https://ruthercloud.com/solutions/inventory.html</loc></url>
+  <url><loc>https://ruthercloud.com/solutions/pos.html</loc></url>
+  <url><loc>https://ruthercloud.com/solutions/sales-force.html</loc></url>
+  <url><loc>https://ruthercloud.com/solutions/vendor.html</loc></url>
+  <url><loc>https://ruthercloud.com/solutions/whatsapp-ai.html</loc></url>
+
+  <!-- Portfolio -->
+  <url><loc>https://ruthercloud.com/portfolio/</loc></url>
+  <url><loc>https://ruthercloud.com/portfolio/business-mobile-app.html</loc></url>
+  <url><loc>https://ruthercloud.com/portfolio/corporate-business-website.html</loc></url>
+  <url><loc>https://ruthercloud.com/portfolio/hotel-booking-website.html</loc></url>
+  <url><loc>https://ruthercloud.com/portfolio/hrms-management-system.html</loc></url>
+  <url><loc>https://ruthercloud.com/portfolio/inventory-management-system.html</loc></url>
+  <url><loc>https://ruthercloud.com/portfolio/lead-management-crm.html</loc></url>
+  <url><loc>https://ruthercloud.com/portfolio/restaurant-management-crm.html</loc></url>
+  <url><loc>https://ruthercloud.com/portfolio/vendor-management-system.html</loc></url>
+
+  <!-- Case Studies -->
+  <url><loc>https://ruthercloud.com/case-study/</loc></url>
+  <url><loc>https://ruthercloud.com/case-study/ai-customer-support-case-study.html</loc></url>
+  <url><loc>https://ruthercloud.com/case-study/cloud-migration-case-study.html</loc></url>
+  <url><loc>https://ruthercloud.com/case-study/erp-case-study.html</loc></url>
+  <url><loc>https://ruthercloud.com/case-study/inventory-management-case-study.html</loc></url>
+  <url><loc>https://ruthercloud.com/case-study/lead-management-crm-case-study.html</loc></url>
+  <url><loc>https://ruthercloud.com/case-study/mobile-app-case-study.html</loc></url>
+
+  <!-- Blogs -->
+  <url><loc>https://ruthercloud.com/blogs/</loc></url>
+  <url><loc>https://ruthercloud.com/blogs/AI-for-Business-Proposal-Writing.html</loc></url>
+  <url><loc>https://ruthercloud.com/blogs/ai-transforming-business.html</loc></url>
+  <url><loc>https://ruthercloud.com/blogs/custom-vs-wordpress.html</loc></url>
+  <url><loc>https://ruthercloud.com/blogs/help-with-cloud-migration.html</loc></url>
+  <url><loc>https://ruthercloud.com/blogs/Top-IT-Companies-in-Udaipur.html</loc></url>
+  <url><loc>https://ruthercloud.com/blogs/website-lead-strategies.html</loc></url>
+  <url><loc>https://ruthercloud.com/blogs/why-business-needs-crm.html</loc></url>
+
+</urlset>
