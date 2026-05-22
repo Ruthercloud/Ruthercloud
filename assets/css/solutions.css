@@ -1,0 +1,196 @@
+/* HERO */
+.services-hero {
+    padding: 140px 8% 100px;
+    background: linear-gradient(135deg, #0f172a, #1e3a8a);
+    text-align: center;
+}
+
+.services-hero-content {
+    max-width: 900px;
+    margin: auto;
+}
+
+.services-hero span {
+    color: #93c5fd;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.services-hero h1 {
+    font-size: 54px;
+    color: white;
+    margin: 20px 0;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.services-hero p {
+    color: #dbeafe;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* GRID SECTION */
+.services-grid-section {
+    padding: 100px 8%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    background: #f8fbff;
+}
+
+/* CARD */
+.service-card {
+    background: white;
+    padding: 35px 30px;
+    border-radius: 24px;
+    box-shadow: 0 15px 40px rgba(15, 23, 42, 0.08);
+    border: 1px solid rgba(37, 99, 235, 0.08);
+    transition: all 0.35s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #2563eb, #60a5fa);
+    transition: 0.4s;
+}
+
+.service-card:hover::before {
+    left: 0;
+}
+
+.service-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 50px rgba(37, 99, 235, 0.15);
+}
+
+.service-card i {
+    font-size: 42px;
+    color: #2563eb;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    font-size: 24px;
+    color: #111827;
+    margin-bottom: 14px;
+    font-weight: 700;
+}
+
+.service-card p {
+    color: #6b7280;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+/* BUTTON */
+.service-card a {
+    display: inline-block;
+    padding: 12px 22px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.service-card a:hover {
+    background: #1d4ed8;
+}
+
+/* CTA */
+.services-cta {
+    padding: 100px 8%;
+    text-align: center;
+    background: white;
+}
+
+.services-cta h2 {
+    font-size: 42px;
+    color: #111827;
+    margin-bottom: 18px;
+    font-weight: 800;
+}
+
+.services-cta p {
+    font-size: 18px;
+    color: #6b7280;
+    margin-bottom: 30px;
+}
+
+.services-cta a {
+    display: inline-block;
+    padding: 16px 34px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.services-cta a:hover {
+    background: #1d4ed8;
+}
+
+/* TABLET */
+@media (max-width: 992px) {
+    .services-grid-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .services-hero h1 {
+        font-size: 42px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .services-hero {
+        padding: 120px 5% 70px;
+    }
+
+    .services-hero h1 {
+        font-size: 32px;
+    }
+
+    .services-hero p {
+        font-size: 15px;
+    }
+
+    .services-grid-section {
+        grid-template-columns: 1fr;
+        padding: 70px 5%;
+    }
+
+    .service-card {
+        padding: 28px 22px;
+    }
+
+    .service-card h3 {
+        font-size: 22px;
+    }
+
+    .services-cta {
+        padding: 70px 5%;
+    }
+
+    .services-cta h2 {
+        font-size: 30px;
+    }
+
+    .services-cta p {
+        font-size: 15px;
+    }
+}

@@ -1,0 +1,228 @@
+/* ===================================
+   CASE STUDY CSS - RutherCloud
+=================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #f8fafc;
+    color: #1e293b;
+    line-height: 1.7;
+}
+
+.container {
+    width: 90%;
+    max-width: 1300px;
+    margin: auto;
+}
+
+/* HERO */
+.services-hero {
+    background: linear-gradient(135deg, #0f172a, #1d4ed8);
+    padding: 130px 20px 90px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.services-hero::before {
+    content: "";
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    background: rgba(255,255,255,0.06);
+    border-radius: 50%;
+    top: -100px;
+    left: -100px;
+    filter: blur(90px);
+}
+
+.services-hero::after {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: rgba(59,130,246,0.15);
+    border-radius: 50%;
+    bottom: -100px;
+    right: -100px;
+    filter: blur(90px);
+}
+
+.services-hero-content {
+    max-width: 900px;
+    margin: auto;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-back {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #dbeafe;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.hero-back:hover {
+    color: white;
+    transform: translateX(-5px);
+}
+
+.services-hero span {
+    display: block;
+    color: #93c5fd;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+}
+
+.services-hero h1 {
+    color: white;
+    font-size: 52px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.services-hero p {
+    color: #dbeafe;
+    font-size: 18px;
+    max-width: 760px;
+    margin: auto;
+}
+
+/* SECTION TITLE */
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title span {
+    color: #2563eb;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 14px;
+}
+
+.section-title h2 {
+    font-size: 42px;
+    color: #0f172a;
+    font-weight: 800;
+}
+
+/* CASE STUDIES */
+.case-studies {
+    padding: 90px 0;
+}
+
+.case-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.case-card {
+    background: white;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 10px 35px rgba(15, 23, 42, 0.08);
+    transition: 0.35s ease;
+    border: 1px solid #e2e8f0;
+}
+
+.case-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 45px rgba(15, 23, 42, 0.12);
+}
+
+.case-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+.case-content {
+    padding: 28px;
+}
+
+.case-content span {
+    display: inline-block;
+    color: #2563eb;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+}
+
+.case-content h3 {
+    font-size: 24px;
+    color: #0f172a;
+    margin-bottom: 16px;
+    line-height: 1.35;
+}
+
+.case-content p {
+    color: #64748b;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.case-content a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.case-content a:hover {
+    color: #1d4ed8;
+    transform: translateX(4px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1100px) {
+    .case-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .services-hero h1 {
+        font-size: 42px;
+    }
+}
+
+@media (max-width: 768px) {
+    .case-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .services-hero {
+        padding: 100px 20px 70px;
+    }
+
+    .services-hero h1 {
+        font-size: 32px;
+    }
+
+    .services-hero p {
+        font-size: 16px;
+    }
+
+    .section-title h2 {
+        font-size: 30px;
+    }
+
+    .case-content h3 {
+        font-size: 21px;
+    }
+}

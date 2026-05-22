@@ -1,0 +1,261 @@
+/* FOOTER */
+.site-footer {
+    background: #0f172a;
+    color: #ffffff;
+    padding-top: 80px;
+}
+
+/* CONTAINER */
+.footer-container {
+    max-width: 1400px;
+    margin: auto;
+    padding: 0 8%;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 50px;
+}
+
+/* BRAND */
+.footer-brand h2 {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.footer-brand h2 span {
+    color: #2563eb;
+}
+
+.footer-brand p {
+    color: #cbd5e1;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    font-size: 15px;
+}
+
+/* SOCIAL */
+.footer-social {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-social a {
+    width: 45px;
+    height: 45px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.footer-social a:hover {
+    background: #2563eb;
+    transform: translateY(-4px);
+}
+
+/* LINKS */
+.footer-links h3,
+.footer-services h3,
+.footer-contact h3 {
+    font-size: 20px;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+.footer-links ul,
+.footer-services ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li,
+.footer-services li {
+    margin-bottom: 16px;
+}
+
+.footer-links a,
+.footer-services a {
+    color: #dbe4ff;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 1.6;
+    transition: 0.3s ease;
+}
+
+.footer-links a:hover,
+.footer-services a:hover {
+    color: #60a5fa;
+}
+
+.footer-links,
+.footer-services {
+    padding-left: 0;
+}
+/* CONTACT */
+.footer-contact p {
+    color: #cbd5e1;
+    margin-bottom: 16px;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.footer-contact i {
+    color: #2563eb;
+    margin-right: 10px;
+}
+
+/* BOTTOM */
+.footer-bottom {
+    margin-top: 60px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding: 25px 8%;
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+/* NEWSLETTER */
+.newsletter {
+    margin-top: 20px;
+}
+
+.newsletter form {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.newsletter input {
+    flex: 1;
+    min-width: 200px;
+    padding: 14px 16px;
+    border: none;
+    border-radius: 12px;
+    outline: none;
+    font-size: 14px;
+}
+
+.newsletter button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 14px 22px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.newsletter button:hover {
+    background: #1d4ed8;
+}
+
+/* RESPONSIVE */
+@media(max-width: 1100px) {
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+}
+
+@media(max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .footer-brand h2 {
+        font-size: 28px;
+    }
+
+    .newsletter form {
+        flex-direction: column;
+    }
+
+    .newsletter input,
+    .newsletter button {
+        width: 100%;
+    }
+
+    .footer-bottom {
+        padding: 20px 6%;
+    }
+}
+
+
+.footer-logo img {
+    height: 35px;
+    width: auto;
+    display: block;
+    margin-bottom: 20px;
+}
+
+
+
+.footer-trust h3 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.trust-logos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    align-items: center;
+    justify-items: center;
+}
+
+.trust-logos a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 90px;
+    background: white;
+    padding: 15px;
+    border-radius: 14px;
+    transition: 0.3s ease;
+}
+
+.trust-logos a:hover {
+    transform: translateY(-5px);
+}
+
+.trust-logos img {
+    max-width: 85%;
+    max-height: 55px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+}
+
+.footer-bottom {
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    margin-top: 50px;
+    padding-top: 25px;
+}
+
+
+
+.footer-company-contact p {
+    color: #dbe4ff;
+    margin-bottom: 14px;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+

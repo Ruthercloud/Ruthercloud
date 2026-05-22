@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #0f172a, #1d4ed8);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    color: white;
+}
+
+.error-page {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.error-page::before {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 50%;
+    top: -100px;
+    left: -100px;
+    filter: blur(90px);
+}
+
+.error-page::after {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: rgba(59,130,246,0.2);
+    border-radius: 50%;
+    bottom: -100px;
+    right: -100px;
+    filter: blur(90px);
+}
+
+.error-content {
+    max-width: 700px;
+    margin: auto;
+    position: relative;
+    z-index: 2;
+}
+
+.error-code {
+    font-size: 180px;
+    font-weight: 900;
+    line-height: 1;
+    color: rgba(255,255,255,0.15);
+}
+
+.error-content h1 {
+    font-size: 52px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.error-content p {
+    font-size: 19px;
+    color: #dbeafe;
+    max-width: 600px;
+    margin: 0 auto 40px;
+    line-height: 1.7;
+}
+
+.error-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 16px 32px;
+    border-radius: 14px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.primary-btn {
+    background: white;
+    color: #1d4ed8;
+}
+
+.primary-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.secondary-btn {
+    background: rgba(255,255,255,0.12);
+    color: white;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.secondary-btn:hover {
+    background: rgba(255,255,255,0.2);
+    transform: translateY(-4px);
+}
+
+@media (max-width: 768px) {
+    .error-code {
+        font-size: 120px;
+    }
+
+    .error-content h1 {
+        font-size: 34px;
+    }
+
+    .error-content p {
+        font-size: 16px;
+    }
+
+    .btn {
+        padding: 14px 24px;
+        font-size: 14px;
+    }
+}
