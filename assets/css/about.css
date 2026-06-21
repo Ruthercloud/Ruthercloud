@@ -58,12 +58,14 @@
 
 /* ABOUT INTRO */
 .about-intro {
-    padding: 100px 8%;
-    display: grid;
-    grid-template-columns: 1.5fr 1fr;
-    gap: 60px;
-    align-items: center;
-    background: linear-gradient(180deg, #ffffff, #f8fbff);
+    padding:100px 8%;
+    background:linear-gradient(180deg,#ffffff,#f8fbff);
+}
+
+.about-content{
+    max-width:900px;
+    margin:0 auto;
+    text-align:left;
 }
 
 .section-tag {
@@ -95,6 +97,20 @@
     text-align: center;
     box-shadow: 0 20px 50px rgba(37,99,235,0.08);
     border: 1px solid rgba(37,99,235,0.08);
+}
+
+
+.founders-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:30px;
+    margin-top:50px;
+}
+
+@media(max-width:768px){
+    .founders-grid{
+        grid-template-columns:1fr;
+    }
 }
 
 .founder-card img {
