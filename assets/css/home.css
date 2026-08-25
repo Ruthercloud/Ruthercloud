@@ -1556,13 +1556,13 @@ body {
 
     border-radius: 18px;
 
-    background: #0b1935;
+    background: #08152f;
 
-    border: 1px solid #294a82;
+    border: 1px solid #315db8;
 
     box-shadow:
-        0 25px 60px rgba(20, 55, 110, 0.22),
-        0 10px 30px rgba(0, 0, 0, 0.12);
+        0 25px 60px rgba(30, 80, 180, 0.20),
+        0 10px 30px rgba(0, 0, 0, 0.10);
 
     transition:
         transform 0.3s ease,
@@ -1573,8 +1573,8 @@ body {
     transform: translateY(-5px);
 
     box-shadow:
-        0 30px 70px rgba(20, 55, 110, 0.28),
-        0 15px 35px rgba(0, 0, 0, 0.14);
+        0 30px 70px rgba(30, 80, 180, 0.27),
+        0 15px 35px rgba(0, 0, 0, 0.13);
 }
 
 
@@ -1590,9 +1590,9 @@ body {
 
     padding: 0 20px;
 
-    background: #13264d;
+    background: #10234a;
 
-    border-bottom: 1px solid rgba(120, 160, 220, 0.18);
+    border-bottom: 1px solid rgba(100, 145, 225, 0.22);
 
     box-sizing: border-box;
 }
@@ -1628,7 +1628,7 @@ body {
 .terminal-title {
     margin-left: 22px;
 
-    color: #78a0da;
+    color: #82a4df;
 
     font-family:
         "SFMono-Regular",
@@ -1669,25 +1669,25 @@ body {
 
     gap: 12px;
 
-    color: #f1f5ff;
+    color: #f3f6ff;
 
     white-space: nowrap;
 }
 
 .terminal-symbol {
-    color: #00c9a7;
+    color: #3b82f6;
 
     font-weight: 700;
 }
 
 .terminal-green {
-    color: #00c9a7;
+    color: #3b82f6;
 }
 
 .terminal-comment {
     margin: 2px 0 8px 25px;
 
-    color: #668cc5;
+    color: #6e91cc;
 }
 
 .terminal-last {
@@ -1702,13 +1702,16 @@ body {
 .terminal-cursor {
     width: 9px;
     height: 19px;
+
     display: inline-block;
-    background: #00c9a7;
+
+    background: #3b82f6;
 
     animation: cursorBlink 1.2s steps(1) infinite;
 }
 
 @keyframes cursorBlink {
+
     0%,
     49% {
         opacity: 1;
@@ -1718,6 +1721,7 @@ body {
     100% {
         opacity: 0;
     }
+
 }
 /* =========================================
    TABLET
