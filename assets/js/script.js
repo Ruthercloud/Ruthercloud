@@ -138,3 +138,19 @@ window.addEventListener("resize", () => {
 });
 
 
+// Terminal Window Hover Effect
+document.addEventListener("DOMContentLoaded", function () {
+
+    const terminal = document.querySelector(".terminal-window");
+
+    if (!terminal) return;
+
+    terminal.addEventListener("mouseenter", function () {
+        terminal.style.transform = "translateY(-5px)";
+    });
+
+    terminal.addEventListener("mouseleave", function () {
+        terminal.style.transform = "translateY(0)";
+    });
+
+});
