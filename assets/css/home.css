@@ -1392,3 +1392,450 @@ body {
         font-size: 14px;
     }
 }
+
+
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.hero {
+    width: 100%;
+    min-height: 620px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 70px;
+
+    padding: 80px 8%;
+
+    box-sizing: border-box;
+
+    background: #f5f9ff;
+}
+
+
+/* =========================================
+   LEFT CONTENT
+========================================= */
+
+.hero-content {
+    width: 50%;
+    max-width: 700px;
+}
+
+.hero-badge {
+    display: inline-block;
+
+    padding: 16px 20px;
+
+    margin-top: 25px;
+    margin-bottom: 28px;
+
+    border-radius: 30px;
+
+    background: #e3edff;
+    color: #2864e8;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.hero h1 {
+    margin: 0;
+
+    font-size: clamp(42px, 4vw, 68px);
+
+    line-height: 1.08;
+
+    font-weight: 700;
+
+    letter-spacing: -2px;
+
+    color: #101828;
+}
+
+.hero h1 span {
+    color: #2864e8;
+}
+
+.hero p {
+    max-width: 650px;
+
+    margin: 28px 0 32px;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    color: #5d6b82;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.hero-buttons {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 58px;
+
+    padding: 0 30px;
+
+    border-radius: 12px;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    transition: all 0.25s ease;
+}
+
+.btn-primary {
+    background: #2864e8;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background: #1d55d1;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: transparent;
+
+    color: #2864e8;
+
+    border: 2px solid #2864e8;
+}
+
+.btn-secondary:hover {
+    background: #2864e8;
+    color: #ffffff;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   TERMINAL AREA
+========================================= */
+
+.hero-terminal {
+    width: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* =========================================
+   TERMINAL WINDOW
+========================================= */
+
+.terminal-window {
+    width: 100%;
+    max-width: 720px;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    background: #0b1935;
+
+    border: 1px solid #294a82;
+
+    box-shadow:
+        0 25px 60px rgba(20, 55, 110, 0.22),
+        0 10px 30px rgba(0, 0, 0, 0.12);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.terminal-window:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 30px 70px rgba(20, 55, 110, 0.28),
+        0 15px 35px rgba(0, 0, 0, 0.14);
+}
+
+
+/* =========================================
+   TERMINAL HEADER
+========================================= */
+
+.terminal-header {
+    height: 56px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 20px;
+
+    background: #13264d;
+
+    border-bottom: 1px solid rgba(120, 160, 220, 0.18);
+
+    box-sizing: border-box;
+}
+
+.terminal-dots {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+
+    display: block;
+
+    border-radius: 50%;
+}
+
+.dot.red {
+    background: #ff5f57;
+}
+
+.dot.yellow {
+    background: #ffbd2e;
+}
+
+.dot.green {
+    background: #28c840;
+}
+
+.terminal-title {
+    margin-left: 22px;
+
+    color: #78a0da;
+
+    font-family:
+        "SFMono-Regular",
+        Consolas,
+        "Liberation Mono",
+        monospace;
+
+    font-size: 15px;
+}
+
+
+/* =========================================
+   TERMINAL BODY
+========================================= */
+
+.terminal-body {
+    padding: 32px 30px 38px;
+
+    min-height: 280px;
+
+    box-sizing: border-box;
+
+    font-family:
+        "SFMono-Regular",
+        Consolas,
+        "Liberation Mono",
+        monospace;
+
+    font-size: 16px;
+
+    line-height: 1.9;
+}
+
+.terminal-line {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    color: #f1f5ff;
+
+    white-space: nowrap;
+}
+
+.terminal-symbol {
+    color: #00c9a7;
+
+    font-weight: 700;
+}
+
+.terminal-green {
+    color: #00c9a7;
+}
+
+.terminal-comment {
+    margin: 2px 0 8px 25px;
+
+    color: #668cc5;
+}
+
+.terminal-last {
+    margin-top: 12px;
+}
+
+
+/* =========================================
+   CURSOR
+========================================= */
+
+.terminal-cursor {
+    width: 9px;
+    height: 19px;
+    display: inline-block;
+    background: #00c9a7;
+
+    animation: cursorBlink 1.2s steps(1) infinite;
+}
+
+@keyframes cursorBlink {
+    0%,
+    49% {
+        opacity: 1;
+    }
+
+    50%,
+    100% {
+        opacity: 0;
+    }
+}
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .hero {
+        padding: 70px 5%;
+
+        gap: 40px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .terminal-body {
+        font-size: 14px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 800px) {
+
+    .hero {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        padding: 60px 20px;
+
+        gap: 50px;
+    }
+
+    .hero-content,
+    .hero-terminal {
+        width: 100%;
+        max-width: none;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero-badge {
+        margin-bottom: 22px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+
+        letter-spacing: -1px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .terminal-window {
+        max-width: 100%;
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 500px) {
+
+    .hero {
+        padding: 45px 15px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+    }
+
+    .terminal-header {
+        height: 50px;
+        padding: 0 14px;
+    }
+
+    .terminal-title {
+        margin-left: 15px;
+        font-size: 12px;
+    }
+
+    .terminal-body {
+        padding: 25px 18px 30px;
+
+        font-size: 11px;
+
+        overflow-x: auto;
+    }
+
+    .terminal-comment {
+        margin-left: 20px;
+    }
+
+}
