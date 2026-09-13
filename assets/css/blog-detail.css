@@ -312,3 +312,113 @@ body {
     }
 
 }
+
+
+/* ==========================================
+   BLOG TABLES
+========================================== */
+
+.detail table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 30px 0;
+    background: #ffffff;
+    border: 1px solid #dfe5ec;
+    border-radius: 12px;
+    overflow: hidden;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.detail table th {
+    background: #f4f7fb;
+    color: #0b1f3a;
+    font-weight: 700;
+    text-align: left;
+    padding: 16px 18px;
+    border-bottom: 2px solid #dfe5ec;
+    vertical-align: middle;
+}
+
+.detail table td {
+    padding: 16px 18px;
+    color: #243b53;
+    border-bottom: 1px solid #e5eaf0;
+    vertical-align: top;
+}
+
+.detail table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Hover Effect */
+.detail table tbody tr:hover {
+    background: #f8fafc;
+}
+
+/* First column emphasis */
+.detail table td:first-child {
+    font-weight: 600;
+    color: #102a43;
+}
+
+/* Rounded corners */
+.detail table th:first-child {
+    border-top-left-radius: 12px;
+}
+
+.detail table th:last-child {
+    border-top-right-radius: 12px;
+}
+
+.detail table tr:last-child td:first-child {
+    border-bottom-left-radius: 12px;
+}
+
+.detail table tr:last-child td:last-child {
+    border-bottom-right-radius: 12px;
+}
+
+
+/* ==========================================
+   TABLE RESPONSIVE WRAPPER
+========================================== */
+
+.detail .table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 30px 0;
+}
+
+.detail .table-responsive table {
+    margin: 0;
+    min-width: 700px;
+}
+
+
+/* ==========================================
+   MOBILE TABLE
+========================================== */
+
+@media (max-width: 768px) {
+
+    .detail .table-responsive {
+        margin: 24px 0;
+        border-radius: 10px;
+    }
+
+    .detail table {
+        font-size: 14px;
+    }
+
+    .detail table th,
+    .detail table td {
+        padding: 12px 14px;
+    }
+
+    .detail .table-responsive table {
+        min-width: 650px;
+    }
+}
