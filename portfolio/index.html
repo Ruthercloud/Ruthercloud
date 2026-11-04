@@ -84,9 +84,9 @@
 </section>
 
 <!-- FILTERS -->
-<section class="portfolio-filters">
-    <button class="active" data-filter="all">All Projects</button>
-    <button data-filter="web">Websites</button>
+<section class="blog-filters">
+   <button class="active" data-filter="all">All Projects</button>
+    <button data-filter="web">Website</button>
     <button data-filter="mobile">Mobile Apps</button>
     <button data-filter="crm">CRM Solutions</button>
     <button data-filter="automation">Automation</button>
@@ -97,7 +97,7 @@
 <section class="portfolio-projects">
 
     <!-- Restaurant CRM -->
-    <div class="project-card" data-category="crm">
+    <div class="blog-card" data-category="crm">
         <img src="/assets/images/Restaurant-Management-Software_1.png" alt="Restaurant CRM">
         <div class="project-content">
             <h3>Restaurant Management CRM</h3>
@@ -112,7 +112,7 @@
     </div>
 
     <!-- Corporate Website -->
-    <div class="project-card" data-category="web">
+    <div class="blog-card" data-category="web">
         <img src="/assets/images/PR-Global-Services.png" alt="Corporate Website">
         <div class="project-content">
             <h3>Corporate Business Website</h3>
@@ -127,7 +127,7 @@
     </div>
 
     <!-- HRMS -->
-    <div class="project-card" data-category="erp">
+    <div class="blog-card" data-category="erp">
         <img src="/assets/images/hrms-demo.png" alt="HRMS">
         <div class="project-content">
             <h3>HRMS Management System</h3>
@@ -142,7 +142,7 @@
     </div>
 
     <!-- Inventory -->
-    <div class="project-card" data-category="erp">
+    <div class="blog-card" data-category="erp">
         <img src="/assets/images/inventory-demo.png" alt="Inventory">
         <div class="project-content">
             <h3>Inventory Management System</h3>
@@ -157,7 +157,7 @@
     </div>
 
     <!-- Lead CRM -->
-    <div class="project-card" data-category="crm">
+    <div class="blog-card" data-category="crm">
         <img src="/assets/images/lead-crm-demo.png" alt="Lead CRM">
         <div class="project-content">
             <h3>Lead Management CRM</h3>
@@ -172,7 +172,7 @@
     </div>
 
     <!-- Hotel Website -->
-    <div class="project-card" data-category="web">
+    <div class="blog-card" data-category="web">
         <img src="/assets/images/hotel-booking-demo.png" alt="Hotel Website">
         <div class="project-content">
             <h3>Hotel Booking Website</h3>
@@ -187,7 +187,7 @@
     </div>
 
     <!-- Vendor -->
-    <div class="project-card" data-category="automation">
+    <div class="blog-card" data-category="automation">
         <img src="/assets/images/vendor-demo.png" alt="Vendor">
         <div class="project-content">
             <h3>Vendor Management System</h3>
@@ -202,7 +202,7 @@
     </div>
 
     <!-- Mobile App -->
-    <div class="project-card" data-category="mobile">
+    <div class="blog-card" data-category="mobile">
         <img src="/assets/images/mobile-app-demo.png" alt="Business App">
         <div class="project-content">
             <h3>Business Mobile App</h3>
@@ -224,19 +224,21 @@
 </a>
 
 <script>
-const filterButtons = document.querySelectorAll(".portfolio-filters button");
-const projectCards = document.querySelectorAll(".project-card");
+const filterButtons = document.querySelectorAll(".blog-filters button");
+const blogCards = document.querySelectorAll(".blog-card");
 
 filterButtons.forEach(button => {
     button.addEventListener("click", () => {
         filterButtons.forEach(btn => btn.classList.remove("active"));
         button.classList.add("active");
 
-        const filter = button.dataset.filter;
+        const filter = button.getAttribute("data-filter");
 
-        projectCards.forEach(card => {
-            if (filter === "all" || card.dataset.category === filter) {
-                card.style.display = "block";
+        blogCards.forEach(card => {
+            const category = card.getAttribute("data-category");
+
+            if (filter === "all" || category.includes(filter)) {
+                card.style.display = "flex";
             } else {
                 card.style.display = "none";
             }
