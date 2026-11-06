@@ -422,7 +422,183 @@
     </div>
 </section>
 
+<!-- BLOG PAGINATION -->
+<div class="blog-pagination" id="blogPagination">
+    <button class="pagination-btn" id="prevPage" disabled>
+        &laquo; Previous
+    </button>
 
+    <div class="pagination-numbers" id="paginationNumbers"></div>
+
+    <button class="pagination-btn" id="nextPage">
+        Next &raquo;
+    </button>
+</div>
+
+<script>
+    
+document.addEventListener("DOMContentLoaded", function () {
+
+    const blogGrid = document.querySelector(".blog-grid");
+    const pagination = document.getElementById("blogPagination");
+
+    if (!blogGrid || !pagination) return;
+
+    const blogCards = Array.from(
+        blogGrid.querySelectorAll(".blog-card")
+    );
+
+    const blogsPerPage = 6;
+    const totalPages = Math.ceil(blogCards.length / blogsPerPage);
+
+    let currentPage = 1;
+
+    const prevButton = document.getElementById("prevPage");
+    const nextButton = document.getElementById("nextPage");
+    const pageNumbers = document.getElementById("paginationNumbers");
+
+    function showPage(page) {
+
+        currentPage = page;
+
+        const start = (currentPage - 1) * blogsPerPage;
+        const end = start + blogsPerPage;
+
+        blogCards.forEach((card, index) => {
+            card.style.display =
+                index >= start && index < end ? "" : "none";
+        });
+
+        renderPagination();
+
+        blogGrid.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+    }
+
+    function renderPagination() {
+
+        pageNumbers.innerHTML = "";
+
+        for (let i = 1; i <= totalPages; i++) {
+
+            const button = document.createElement("button");
+
+            button.className = "pagination-number";
+            button.textContent = i;
+
+            if (i === currentPage) {
+                button.classList.add("active");
+                button.setAttribute("aria-current", "page");
+            }
+
+            button.addEventListener("click", function () {
+                showPage(i);
+            });
+
+            pageNumbers.appendChild(button);
+        }
+
+        prevButton.disabled = currentPage === 1;
+        nextButton.disabled = currentPage === totalPages;
+    }
+
+    prevButton.addEventListener("click", function () {
+        if (currentPage > 1) {
+            showPage(currentPage - 1);
+        }
+    });
+
+    nextButton.addEventListener("click", function () {
+        if (currentPage < totalPages) {
+            showPage(currentPage + 1);
+        }
+    });
+
+    if (totalPages <= 1) {
+        pagination.style.display = "none";
+    }
+
+    showPage(1);
+
+});
+</script>
+
+<style>
+    
+/* =====================================
+   BLOG PAGINATION
+===================================== */
+
+.blog-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin: 50px auto 20px;
+    flex-wrap: wrap;
+}
+
+.pagination-numbers {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.pagination-btn,
+.pagination-number {
+    min-width: 42px;
+    height: 42px;
+    padding: 0 14px;
+    border: 1px solid #dbe3ef;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #1e3a8a;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.pagination-btn:hover:not(:disabled),
+.pagination-number:hover {
+    background: #eff6ff;
+    border-color: #2563eb;
+}
+
+.pagination-number.active {
+    background: #2563eb;
+    border-color: #2563eb;
+    color: #ffffff;
+}
+
+.pagination-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+@media (max-width: 480px) {
+    .blog-pagination {
+        gap: 6px;
+    }
+
+    .pagination-btn,
+    .pagination-number {
+        min-width: 36px;
+        height: 38px;
+        padding: 0 10px;
+        font-size: 13px;
+    }
+
+    .pagination-numbers {
+        gap: 5px;
+    }
+}
+
+</style>
+
+    
 <script>
 const filterButtons = document.querySelectorAll(".blog-filters button");
 const blogCards = document.querySelectorAll(".blog-card");
