@@ -350,3 +350,192 @@
         height: 140px;
     }
 }
+
+
+
+/* =========================================
+   ABOUT PAGE - ADDITIONAL STYLING
+========================================= */
+
+/* HERO BACK LINK */
+.hero-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 28px;
+    transition: 0.3s ease;
+}
+
+.hero-back:hover {
+    color: #93c5fd;
+    transform: translateX(-4px);
+}
+
+/* ABOUT INTRO WIDTH */
+.about-content {
+    max-width: 1000px;
+}
+
+.about-content p {
+    text-align: justify;
+}
+
+/* FOUNDERS GRID */
+.founders-grid {
+    max-width: 950px;
+    margin: 55px auto 0;
+    align-items: stretch;
+}
+
+.founder-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease;
+}
+
+.founder-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 25px 55px rgba(37,99,235,0.13);
+}
+
+/* STORY CARDS */
+.story-card {
+    height: 100%;
+    border: 1px solid #eef2f7;
+    transition: 0.3s ease;
+}
+
+.story-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 40px rgba(37,99,235,0.10);
+}
+
+/* MISSION VISION */
+.mv-card {
+    height: 100%;
+    border: 1px solid #eef2f7;
+    transition: 0.3s ease;
+}
+
+.mv-card:hover {
+    transform: translateY(-5px);
+}
+
+/* VALUES */
+.values-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.value-card {
+    border: 1px solid #eef2f7;
+    color: #1e293b;
+}
+
+/* WHY CHOOSE */
+.why-grid {
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+.why-card {
+    height: 100%;
+    border: 1px solid #eef2f7;
+    transition: 0.3s ease;
+}
+
+.why-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(37,99,235,0.12);
+}
+
+/* FUTURE SECTION */
+.future-section {
+    background: #f8fbff;
+}
+
+/* ABOUT FINAL CTA */
+.about-cta {
+    padding: 90px 8%;
+    background: linear-gradient(135deg, #0f172a, #1e40af);
+    text-align: center;
+}
+
+.about-cta .section-title {
+    margin-bottom: 0;
+}
+
+.about-cta .section-title span {
+    color: #93c5fd;
+}
+
+.about-cta .section-title h2 {
+    color: #ffffff;
+}
+
+.about-cta .section-title p {
+    max-width: 700px;
+    margin: 20px auto 30px;
+    color: #dbeafe;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.about-cta .section-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background: #ffffff;
+    color: #1d4ed8;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.about-cta .section-btn:hover {
+    background: #dbeafe;
+    transform: translateY(-3px);
+}
+
+/* RESPONSIVE ADDITIONS */
+@media (max-width: 768px) {
+
+    .about-content p {
+        text-align: left;
+        font-size: 15px;
+    }
+
+    .founders-grid {
+        gap: 20px;
+        margin-top: 35px;
+    }
+
+    .founder-card {
+        padding: 28px 20px;
+    }
+
+    .story-card,
+    .mv-card,
+    .why-card {
+        padding: 28px 22px;
+    }
+
+    .about-cta {
+        padding: 65px 5%;
+    }
+
+    .about-cta .section-title h2 {
+        font-size: 30px;
+    }
+
+    .about-cta .section-title p {
+        font-size: 15px;
+    }
+
+}
